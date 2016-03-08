@@ -1,0 +1,29 @@
+{
+  "name": "easywebhub",
+  "version": "1.0.0",
+  "description": "easywebhub",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "no"
+  ],
+  "author": "quocbao",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-static": "^1.0.3",
+    "metalsmith": "^2.1.0",
+    "metalsmith-branch": "0.0.4",
+    "metalsmith-copy": "^0.2.1",
+    "metalsmith-markdown": "^0.2.1"
+  },
+  "devDependencies": {
+    "metalsmith-flatten": "^0.2.0"
+  }
+}

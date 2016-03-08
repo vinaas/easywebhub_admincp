@@ -1,0 +1,53 @@
+---
+layout: containersidebar
+---
+<div id="center_column" class="center_column col-xs-12 col-sm-9">
+  <div class="pos_center_column">
+<div class="background-position list-tintuc">
+  <div class="block-smartblog">
+    <div class="blog-title">
+         <h2>
+             <a href="#">
+                 <span><%= @document.title %></span>
+             </a>
+         </h2>
+     </div>
+
+     <div class="row pos-content">
+         <div class="sdsblog-box-content">
+
+         <% for tintuc in @getCollection("html").findAllLive({mucTintuc: @document.tenTintuc}, {ngaydang: -1}).toJSON(): %>
+
+         <div class="col-sm-4">
+
+             <div class="sds_blog_post">
+                 <div class="news_module_image_holder">
+                     <a href="<%= tintuc.url %>">
+                         <img alt="<%= tintuc.title %>"
+                              class="feat_img_small" src="<%= tintuc.thumbnail %>">
+                     </a>
+                 </div>
+                 <div class="blog_content">
+                     <h2 class="sds_post_title"><a href="<%= tintuc.url %>"><%= tintuc.title %></a></h2>
+                     <span class="date-smart">Ngày <%= @time(tintuc.ngaydang, 'DD') %>/<%= @time(tintuc.ngaydang, 'MM') %>/<%= @time(tintuc.ngaydang, 'YYYY') %></span>
+                     <a href="<%= tintuc.url %>" class="r_more">Xem thêm</a>
+                     <p>
+                        <%= tintuc.sDescription %>
+                     </p>
+
+                 </div>
+             </div>
+
+
+         </div>
+             <% end %>
+
+           </div>
+           </div>
+  </div>
+</div>
+
+
+
+  </div>
+</div>

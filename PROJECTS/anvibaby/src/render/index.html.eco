@@ -1,0 +1,572 @@
+---
+name: 'Home'
+layout: 'containersidebar'
+section: 'home'
+activeName: "trangchu"
+slides:
+  -
+    image: img/slider/slider-1.jpg
+    url: index.html
+    title: "Anvibaby"
+  -
+    image: img/slider/slider-2.jpg
+    url: index.html
+    title: "Anvibaby"
+  -
+    image: img/slider/slider-3.jpg
+    url: index.html
+    title: "Anvibaby"
+---
+
+<div id="center_column" class="center_column col-xs-12 col-sm-9">
+  <div class="pos_center_column">
+    <div class=" pos_bannerslide">
+      <div class="pos_slideshow">
+        <div class="pos-slideshow">
+          <div class="flexslider ma-nivoslider">
+            <div class="pos-loading"></div>
+
+            <div id="pos-slideshow-home" class="slides">
+
+              <% for slide in @document.slides: %>
+              <a href="<%= slide.url %>">
+                <img src="<%= slide.image %>" class="img-responsive" style="display:none" alt="" title="" />
+              </a>
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+
+        <script type="text/javascript">
+
+          $(document).ready(function(){
+
+            $(document).off('mouseenter').on('mouseenter', '.pos-slideshow', function(e) {
+              $('.pos-slideshow .timethai').addClass('pos_hover');
+            });
+
+            $(document).off('mouseleave').on('mouseleave', '.pos-slideshow', function(e) {
+              $('.pos-slideshow .timethai').removeClass('pos_hover');
+            });
+
+            $('#pos-slideshow-home').nivoSlider({
+              effect: 'random',
+              slices: 15,
+              boxCols: 8,
+              boxRows: 4,
+              animSpeed: '600',
+              pauseTime: '6000',
+              startSlide: 1,
+              directionNav: 1,
+              controlNav: 1,
+              controlNavThumbs: false,
+              pauseOnHover: true,
+              manualAdvance: false,
+              prevText: '<i class="icon-chevron-left"></i>',
+              nextText: '<i class="icon-chevron-right"></i>',
+              afterLoad: function() {
+                $('.pos-loading').css("display", "none");
+              },
+            });
+          });
+
+        </script>
+
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $(".tab_content").hide();
+        $(".tab_content:first").show();
+
+        $("ul.tabs li").click(function() {
+          $("ul.tabs li").removeClass("active");
+          $(this).addClass("active");
+          $(".tab_content").hide();
+          $(".tab_content").removeClass("animate1 ");
+          var activeTab = $(this).attr("rel");
+          $("#" + activeTab).addClass("animate1 ");
+          $("#" + activeTab).fadeIn();
+        });
+      });
+    </script>
+
+    <div class="feature text-center">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="img/feature/earth.png" alt="" class="img-responsive"/>
+            <h4>An toàn cho bé</h4>
+            <p>
+              Tã vải dùng có thể giặt lại, hạn chế tối đa rác thải, thải ra môi trường.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <img src="img/feature/peoples.png" alt="" class="img-responsive"/>
+            <h4>Được các mẹ tin dùng</h4>
+            <p>
+              Sản phẩm được đánh giá cao từ các bà mẹ về sự an toàn và chống hăm cho bé.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <img src="img/feature/foot.png" alt="" class="img-responsive"/>
+            <h4>Lớn lên cùng bé</h4>
+            <p>
+              Một bộ tã vải có thể dùng đến gần 3 năm nên sẽ cùng bé lớn lên cùng năm tháng.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="feature">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="img/feature/best1.jpg" alt="" class="img-responsive"/>
+            <h4 class="text-center">An toàn cho bé</h4> <br>
+            <p>
+              Tã vải <span class="txt-blue b"> Anvi Baby</span> mềm mại thoáng mát rất tốt cho làn da nhạy cảm của em bé và hoàn toàn không chứa các chất hoá học độc hại như tã giấy. Sự kết hợp tuyệt vời giữa các chất liệu cotton (sợi tự nhiên), bamboo charcoal (sợi than tre hoạt tính), microfiber (sợi tổng hợp siêu nhỏ), suede cloth (sợi mát thấm 1 chiều), giúp không bị ướt ra bên ngoài, không bị thấm ngược giữ cho da bé khô ráo.
+            </p>
+
+            <p>
+              Thiết kế tã vải <span class="txt-blue b"> Anvi Baby</span> đàn hồi, co dãn giúp vừa khít với bắp chân của em bé, có nhiều nút bấm để thay đổi độ rộng phù hợp với sự lớn lên từng ngày của bé, bé có thể chơi đùa năng động hay ngủ ngon suốt đêm mà mẹ không lo ngại gì cả.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="img/feature/best2.jpg" alt="" class="img-responsive"/>
+            <h4  class="text-center">Tiết kiệm cho mẹ</h4> <br>
+            <p>
+              Tã vải hiện đại giúp tiết kiệm tối đa túi tiền cho mẹ. Thực vậy:  <br>
+              Một ngày mẹ sẽ phải sử dụng tối thiểu 3 tã giấy để đảm bảo đủ cho bé, <br>
+              trung bình 1 ngày mẹ phải tiêu tốn : <span class="txt-red b">3 x 5.000đ = 15.000đ</span>  </p>
+              <p>
+                Trong vòng 3 năm số tiền sử dụng cho tã giấy sẽ là :  <span class="txt-red b">  15.000đ x 3 x 365 ngày = 16.425.000đ.</span>
+              </p>
+              <p>
+                Tuy nhiên với tã vải hiện đại AnVi Baby có thể tái sử dụng trong vòng 3 năm, nên mẹ chỉ cần mua cho bé khoảng 10 bộ tã và chi phí chỉ vào khoảng hơn 1 triệu đồng.<br>
+                <span class="txt-red b">Thật là sự lựa chọn tuyệt vời phải không mẹ?!!</span>
+              </p>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="product-tabs-container-slider">
+      <ul class="tabs">
+        <li class="first_item item  active " rel="tab_new_product">
+          Hàng mới
+        </li>
+        <li class="last_item item " rel="tab_besseller_product">
+          Bán chạy nhất
+        </li>
+
+      </ul>
+
+      <div class="tab_container">
+
+        <div id="tab_new_product" class="tab_content">
+          <div class="row pos-content">
+            <div class="productTabContent owl-carousel">
+              <% for item in [0...@getCollection('products').length]: %>
+                <% product = @getCollection('products').toJSON()[item] %>
+                  <% if item %% 2 is 0: %>
+                    <div class="tabslider_item">
+                      <% end %>
+
+                        <div class="item-product">
+                          <div class="products-inner">
+                            <a class="tabproduct-img product_image" href="<%= product.url %>#<%= @getProductIdName() %>" title="<%= product.title %>">
+                              <img class="replace-2x img-responsive" src="<%= product.images[0].thickbox %>" alt="" />
+                            </a>
+                          </div>
+                          <div class="product-contents">
+
+                            <h5 class="product-name">
+                              <a class="product-name" href="<%= product.url %>#<%= @getProductIdName() %>" title="<%= product.title %>">
+                                <%= product.title %>
+                              </a>
+                            </h5>
+                            <div class="price-box">
+
+                              <% for gia1 in product.sizes: %>
+                                <% if gia1.id == @getProductIdName() : %>
+                                  <span class="price product-price">
+
+                                    <%= gia1.price %>
+                                  </span>
+                                  <% if gia1.old_price > gia1.price: %>
+                                  <span class="old-price product-price">
+                                    <%= gia1.old_price %>
+                                  </span>
+                                  <% end %>
+
+                                <% end %>
+                              <% end %>
+                            </div>
+
+                            <a class="new-box" href="<%= product.url %>">
+                              <span class="new-label">Mới</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <% if item %% 2 isnt 0: %>
+                    </div>
+                    <% end %>
+
+                    <% if item %% 2 is 0 and item + 1 is @getCollection('products').length : %>
+                    </div>
+                    <% end %>
+
+                      <% end %>
+
+            </div>
+            <div class="boxprevnext">
+              <a class="prev prevtabslider"></a>
+              <a class="next nexttabslider"></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="tab_besseller_product" class="tab_content">
+          <div class="row pos-content">
+            <div class="featureSlide owl-carousel">
+              <% for item1 in [0...@getCollection("html").findAllLive({bestseller:true}).length]: %>
+                <% product1 = @getCollection("html").findAllLive({bestseller:true}).toJSON()[item1] %>
+                    <% if item1 %% 2 is 0: %>
+                    <div class="tabslider_item">
+                    <% end %>
+                        <div class="item-product">
+                          <div class="products-inner">
+                            <a class="tabproduct-img product_image" href="<%= product1.url %>#<%= @getProductIdName() %>" title="<%= product1.title %>">
+                              <img class="replace-2x img-responsive" src="<%= product1.images[0].thickbox %>" alt="" />
+                            </a>
+
+                          </div>
+                          <div class="product-contents">
+                            <h5 class="product-name">
+                              <a class="product-name" href="<%= product1.url %>#<%= @getProductIdName() %>" title="<%= product1.title %>">
+                                <%= product1.title %>
+                              </a>
+                            </h5>
+                            <div class="price-box">
+                              <% for gia2 in product1.sizes: %>
+                                <% if gia2.id == @site.productIdDefault : %>
+                                  <span class="price product-price">
+
+                                    <%= gia2.price %>
+                                  </span>
+                                  <% if gia2.old_price > gia2.price: %>
+                                  <span class="old-price product-price">
+                                    <%= gia2.old_price %>
+                                  </span>
+                                  <% end %>
+
+                                <% end %>
+                              <% end %>
+                            </div>
+
+                            <a class="sale-box" href="<%= product1.url %>#<%= @getProductIdName() %>">
+                                <span class="sale-label">Sale!</span>
+                            </a>
+                          </div>
+                        </div>
+                    <% if item1 %% 2 isnt 0: %>
+                    </div>
+                    <% end %>
+
+                    <% if item %% 2 is 0 and item + 1 is @getCollection("html").findAllLive({bestseller:true}).length : %>
+                    </div>
+                    <% end %>
+
+                <% end %>
+            </div>
+            <div class="boxprevnext">
+              <a class="prev prevfure"></a>
+              <a class="next nextfure"></a>
+            </div>
+          </div>
+
+          </div>
+
+        </div>
+</div>
+
+      </div>
+      <!-- .tab_container -->
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        var owl = $(".productTabContent");
+        owl.owlCarousel({
+          items: 4,
+          slideSpeed: 1000,
+          autoPlay: 7000,
+          stopOnHover: true,
+          pagination: false,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [991, 2],
+          itemsTablet: [767, 2],
+          itemsMobile: [480, 1]
+        });
+        $(".nexttabslider").click(function() {
+          owl.trigger('owl.next');
+        })
+        $(".prevtabslider").click(function() {
+          owl.trigger('owl.prev');
+        })
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var owl = $(".featureSlide");
+        owl.owlCarousel({
+          items: 4,
+          slideSpeed: 1000,
+          autoPlay: 7000,
+          stopOnHover: true,
+          pagination: false,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [991, 2],
+          itemsTablet: [767, 2],
+          itemsMobile: [480, 1],
+          autoPlay: false,
+        });
+
+        // Custom Navigation Events
+        $(".nextfure").click(function() {
+          owl.trigger('owl.next');
+        })
+        $(".prevfure").click(function() {
+          owl.trigger('owl.prev');
+        })
+      });
+    </script>
+
+
+        <div class="background-position">
+          <div class="block-smartblog">
+            <div class="blog-title">
+              <h2>
+                <a href="" class="cursor-default">
+                  <span>Hướng dẫn sử dụng các loại tả!</span>
+                </a>
+              </h2>
+            </div>
+            <div class="row pos-content">
+              <div class="sdsblog-box-content owl-carousel">
+
+                <% for tintuc in @getCollection("html").findAllLive({mucTintuc: "huongdan"}, {ngaydang: -1}).toJSON(): %>
+
+                <div>
+
+                  <div class="sds_blog_post">
+                    <div class="news_module_image_holder">
+                      <a href="<%= tintuc.url %>">
+                        <img alt="<%= tintuc.title %>" class="feat_img_small" src="<%= tintuc.thumbnail %>">
+                      </a>
+                    </div>
+                    <div class="blog_content">
+                      <h2 class="sds_post_title"><a href="<%= tintuc.url %>"><%= tintuc.title %></a></h2>
+                      <span class="date-smart">Ngày <%= @time(tintuc.ngaydang, 'DD') %>/<%= @time(tintuc.ngaydang, 'MM') %>/<%= @time(tintuc.ngaydang, 'YYYY') %></span>
+                      <a href="<%= tintuc.url %>" class="r_more">Xem thêm</a>
+                      <p>
+                        <%= tintuc.sDescription %>
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <% end %>
+              </div>
+
+              <div class="boxprevnext">
+                <a class="prev nextblog"></a>
+                <a class="next prevblog"></a>
+              </div>
+
+            </div>
+          </div>
+
+          <script>
+            $(document).ready(function() {
+
+              var owl = $(".sdsblog-box-content");
+
+              owl.owlCarousel({
+                autoPlay: false,
+                pagination: false,
+                items: 3,
+                slideSpeed: 1000,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [991, 3],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1]
+              });
+              // Custom Navigation Events
+              $(".nextblog").click(function() {
+                owl.trigger('owl.next');
+              })
+              $(".prevblog").click(function() {
+                owl.trigger('owl.prev');
+              })
+            });
+          </script>
+        </div>
+      <br>
+      <br>
+      <br>
+
+
+        <div class="background-position">
+          <div class="block-smartblog">
+            <div class="blog-title">
+              <h2>
+                <a href="" class="cursor-default">
+                  <span>Chuyên mục nuôi con !</span>
+                </a>
+              </h2>
+            </div>
+            <div class="row pos-content">
+              <div class="sdsblog-box-content2 owl-carousel">
+                <% for tintuc2 in @getCollection("html").findAllLive({mucTintuc: "camnang"}, {ngaydang: -1}).toJSON(): %>
+
+                <div>
+
+                  <div class="sds_blog_post">
+                    <div class="news_module_image_holder">
+                      <a href="<%= tintuc2.url %>">
+                        <img alt="<%= tintuc2.title %>" class="feat_img_small" src="<%= tintuc2.thumbnail %>">
+                      </a>
+                    </div>
+                    <div class="blog_content">
+                      <h2 class="sds_post_title"><a href="<%= tintuc2.url %>"><%= tintuc2.title %></a></h2>
+                      <span class="date-smart">Ngày <%= @time(tintuc.ngaydang, 'DD') %>/<%= @time(tintuc.ngaydang, 'MM') %>/<%= @time(tintuc.ngaydang, 'YYYY') %></span>
+                      <a href="<%= tintuc2.url %>" class="r_more">Xem thêm</a>
+                      <p>
+                        <%= tintuc2.sDescription %>
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <% end %>
+
+
+              </div>
+
+                <div class="boxprevnext">
+                  <a class="prev nextblog2"></a>
+                  <a class="next prevblog2"></a>
+                </div>
+
+            </div>
+          </div>
+
+          <script>
+            $(document).ready(function() {
+
+              var owl = $(".sdsblog-box-content2");
+
+              owl.owlCarousel({
+                autoPlay: false,
+                pagination: false,
+                items: 3,
+                slideSpeed: 1000,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [991, 3],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1]
+              });
+              // Custom Navigation Events
+              $(".nextblog2").click(function() {
+                owl.trigger('owl.next');
+              })
+              $(".prevblog2").click(function() {
+                owl.trigger('owl.prev');
+              })
+            });
+          </script>
+        </div>
+
+
+  </div>
+
+
+  <div id="popup-km" style="display: none;">
+    <div class="clearfix" style="width: 100%">
+    <div style="padding-right:10px; max-height:400px; overflow:hidden">
+    <p><span style="color:rgb(255, 0, 0)"><strong>&nbsp;</strong></span><img src="http://i.imgur.com/4YiYQOJ.png" style="float:left; height:52px; width:200px"><span style="color:rgb(255, 0, 0)"><strong>Fre</strong></span><strong>e ship mọi miền tổ quốc - Ship COD nhận hàng rồi thanh toán tiền sau</strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="color:rgb(255, 0, 0)">Vừa bổ sung những mẫu cháy hàng vừa ra mắt một số mẫu mới. Vẫn giữ nguyên chính sách khuyến mãi như cũ nha các Mẹ!<br>
+GIÁ BÁN LẺ:&nbsp;<span style="font-size:18px">129K</span>/ CHIẾC(giá thị trường 135k )</span></strong></p>
+
+<p><strong><span style="color:rgb(255, 0, 0)">Size M ngày=129k :&nbsp;Size M đêm=139K : Size L ngày = 139k : Size L đêm=149K (cam kết giá rẻ nhất đến tay quý khách hàng)</span></strong></p>
+
+<p><strong><span style="color:rgb(255, 0, 0)">=========================================================================</span></strong></p>
+
+<p><strong><span style="color:rgb(255, 0, 0)">++ Khách nội thành TP.HCM:<br>
++ Mua 3 sản phẩm: freeship<br>
++ Mua 5 sản phẩm: &nbsp;freeship + 1 miếng lót &nbsp;(miếng lót trị giá 50k)&nbsp;</span></strong></p>
+
+<p><strong><span style="color:rgb(255, 0, 0)">===========================================================================<br>
+++ Khách ngoại tỉnh: Free ship với đơn hàng ~500k</span></strong></p>
+
+<p><strong><span style="color:rgb(255, 0, 0)">+ Mua 5 sản phẩm: free ship hoặc&nbsp;&nbsp;KM 1 miếng lót tã&nbsp;trị giá 50k.<br>
++ Mua 10 sản phẩm: freeship + 1 vỏ tã &nbsp;(vỏ tã trị giá 90k)<br>
++ Mua 15 sản phẩm: freeship + 1 bộ tã &nbsp;(bộ tã trị giá 139k)</span></strong></p>
+
+<p><strong><span style="color:rgb(255, 0, 0)">====================================================</span></strong></p>
+
+<p><strong><em><span style="color:rgb(128, 0, 128)"><span style="font-size:12px"><span style="font-size:14px">0973.260.062 - 0935.258.885</span></span></span><span style="color:rgb(255, 0, 0)"><span style="font-size:12px"><span style="font-size:14px">&nbsp;</span>&nbsp;</span></span></em><span style="color:rgb(0, 0, 205)"><span style="font-size:12px">hãy gọi ngay chúng tôi để được tư vấn tận tình về chức năng của tã&nbsp;vải</span></span></strong></p>
+</div>
+
+
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+
+function openPopup(name){
+  var element = '#'+name;
+  $.fancybox.open([
+      {
+           href : element,
+      },
+  ], {
+    padding:  [15, 15, 15, 15],
+    width: 960,
+    autoSize: false,
+    autoHeight: true,
+    title: '',
+    tpl: {
+      error: '<p class="fancybox-error">Nội dung không hiển thị<br/>Vui lòng xem lại.</p>',
+      closeBtn: '<a title="Đóng cửa sổ" class="pop-up-close" href="javascript:;"><i class="fa fa-times"></i></a>'
+    }
+  });
+}
+
+$(document).ready(function() {
+
+
+  if ($.cookie('test_status') != '1') {
+      openPopup("popup-km");
+        // set cookie here if not previous set
+        var date = new Date();
+        var minutes = 30;
+        date.setTime(date.getTime() + (minutes * 60 * 1000));
+        $.cookie('test_status', '1', {expires: date});
+   }
+});
+
+</script>

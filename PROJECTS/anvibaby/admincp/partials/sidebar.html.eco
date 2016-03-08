@@ -1,0 +1,303 @@
+<div id="left_column" class="column col-xs-12 col-sm-3">
+  <div class="navleft-container visible-lg visible-md ">
+    <div class="pt_vmegamenu_title">
+      <h2><i class="icon-reorder"></i>All categories</h2>
+    </div>
+    <div id="pt_vmegamenu" class="pt_vmegamenu">
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel pt_menu pt_menu_block ">
+          <div class="parentMenu" role="tab" id="headingOne">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <span class=" cate-thumb">
+                <img class="img-cate" src="/img/c/ta-icon.png" width="20" alt="" />
+              </span>
+              <span>Danh mục</span>
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <ul class="des-list">
+                <li><a href="/ta-ban-ngay-size-L.html">
+                  Tã Ban Ngày Size L ( 13-20kg)
+                </a></li>
+                <li><a href="/ta-ban-dem-size-L.html">
+                  Tã Ban Đêm Size L ( 13-20kg)
+                </a></li>
+
+                <li><a href="/ta-ban-ngay-size-M.html">
+                  Tã Ban Ngày Size M (3-16Kg)
+                </a></li>
+
+                <li><a href="/ta-ban-dem-size-M.html">
+                  Tã Ban Đêm Size M (3-16Kg)
+                </a></li>
+
+                <!--
+                  <% for danhmuc in @getCollection("html").findAllLive({danhmuc: true}).toJSON(): %>
+                  <li class="<%= if danhmuc.id is @document.id then 'active' else 'inactive'%>">
+                          <a href="<%= danhmuc.url%>">
+                            <%= danhmuc.title %>
+                          </a>
+                        </li>
+                    <% end %>
+               -->
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel pt_menu pt_menu_block ">
+          <div class="parentMenu" role="tab" id="headingOne">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+              <span class=" cate-thumb">
+                <img class="img-cate" src="/img/c/92-0_thumb.jpg" alt="" />
+              </span>
+              <span>Miếng Lót Trong</span>
+            </a>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <ul class="des-list">
+                <li><a href="">
+                  Miếng lót ngày
+                </a></li>
+                <li><a href="">
+                  Miếng lót đêm
+                </a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+        <% for muctintuc in @getCollection("html").findAllLive({tintuc: true}).toJSON(): %>
+<div class="panel pt_menu nodrop pt_menu_block">
+              <div class="parentMenu" role="tab" id="headingTwo">
+                <a href="<%= muctintuc.url%>">
+                  <span class=" cate-thumb">
+                    <img class="img-cate" src="/img/c/46-0_thumb.jpg" alt="" />
+                  </span>
+                  <span><%= muctintuc.title %></span>
+                </a>
+              </div></div>
+
+          <% end %>
+
+
+        <div class="panel pt_menu pt_menu_block">
+          <div class="parentMenu" role="tab" id="headingThree">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <span class=" cate-thumb">
+                <img class="img-cate" src="/img/c/67-0_thumb.jpg" alt="" />
+              </span>
+              <span>Hướng dẫn</span>
+            </a>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+              <ul class="des-list">
+                <li>
+                  <a class="" href="">
+                    <span>Hướng dẫn mua hàng tại anvibaby.com</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <!-- /MODULE Block best sellers -->
+  <div class="free-shipping">
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="banner-box ">
+      <div class="fb-page" data-href="https://www.facebook.com/tavaianvibaby/" data-tabs="timeline" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/tavaianvibaby/"><a href="https://www.facebook.com/tavaianvibaby/">Tã Vải AnVi Baby - www.anvibaby.com</a></blockquote></div></div>
+    </div>
+
+    <div class="banner-box ">
+      <a href="#">
+        <img src="/img/banner1.jpg" class="img-responsive" alt="" />
+      </a>
+    </div>
+
+
+    <div class="banner-box ">
+      <a href="#">
+        <img src="/img/banner2.jpg" class="img-responsive" alt="" />
+      </a>
+    </div>
+  </div>
+
+
+
+  <div id="special_products_home" class="products_block ">
+    <div class="special_products_title">
+      <h4>
+        Sản phẩm bán chạy
+      </h4>
+    </div>
+    <div class="block_content">
+
+      <div class="row pos-content">
+        <div id="pos-special-products" class="">
+          <% for promotion in @getCollection("html").findAllLive({promotion:true}).toJSON()[0...3]: %>
+          <div class="item-special">
+              <div class="item-product">
+                  <div class="products-inner">
+                      <a href="<%= promotion.url %>" title="" class="content_img clearfix">
+                          <img src="/<%= promotion.images[0].thickbox %>" class="img-responsive" alt=""/>
+                      </a>
+
+                  </div>
+                  <div class="product-contents">
+
+                      <h5 class="product-name">
+                          <a href="detail.html" title="">  <%= promotion.title %><br/>  </a>
+                      </h5>
+
+                      <div class="price-box">
+                          <span class="price product-price">
+                            <%= promotion.price %> </span>
+
+                          <span class="old-price product-price">
+                            <%= promotion.old_price %>
+                          </span>
+
+                          <span class="price-percent-reduction"><%= 100 - ((promotion.price * 100) // promotion.old_price) %> %</span>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+          <% end %>
+
+        </div>
+
+        <!-- <div class="boxprevnext">
+  <a class="prev prevspecial"></a>
+  <a class="next nextspecial"></a>
+</div> -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    $(document).ready(function() {
+
+      var owl = $("#pos-special-products");
+
+      owl.owlCarousel({
+        autoPlay: false,
+        pagination: true,
+        items: 1,
+        slideSpeed: 1000,
+        itemsDesktop: [1199, 1],
+        itemsDesktopSmall: [991, 1],
+        itemsTablet: [767, 2],
+        itemsMobile: [480, 1]
+      });
+      // Custom Navigation Events
+      $(".nextspecial").click(function() {
+        owl.trigger('owl.next');
+      })
+      $(".prevspecial").click(function() {
+        owl.trigger('owl.prev');
+      })
+    });
+  </script>
+  <!-- MODULE Block best sellers -->
+
+
+
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RmCkaALa4ZA" frameborder="0" allowfullscreen></iframe>
+  </div>
+<br>
+<br>
+
+  <div id="form-gopy" class="products_block ">
+    <div class="special_products_title">
+      <h4>
+        <a href="prices-drop.html" title="product products">Gửi ý kiến/ đăng ký đại lý</a>
+      </h4>
+    </div>
+    <div class="block_content">
+
+      <div class="row pos-content">
+
+        <div class="form_content clearfix">
+
+          <div class="form-group">
+            <label for="hoten">Họ tên* :</label>
+            <input class="is_required validate account_input form-control" type="text" id="hoten" name="email" value="" autocomplete="off" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;">
+          </div>
+
+          <div class="form-group ">
+            <label for="phone">Điện thoại* :</label>
+            <input class="is_required validate account_input form-control" type="text" id="phone" name="email" value="" autocomplete="off" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;">
+          </div>
+
+					<div class="form-group ">
+						<label for="email">Email address</label>
+						<input class="is_required validate account_input form-control" type="email" id="email" name="email" value="" autocomplete="off" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;">
+					</div>
+
+          <div class="form-group">
+            <label for="address">Địa chỉ :</label>
+            <input class="is_required validate account_input form-control" type="text" id="address" name="email" value="" autocomplete="off" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;">
+          </div>
+
+          <div class="form-group">
+            <label for="noidung">Nội dung* :</label>
+            <textarea class="is_required validate account_input form-control" name="noidung" rows="3" cols="20"></textarea>
+          </div>
+
+
+					<p class="submit">
+						<input type="hidden" class="hidden" name="back" value="http://demo.posthemes.com/pos_beestore/layout2/en/order?step=1">						<button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
+							<span>
+								<i class="fa fa-envelope-o"></i>
+								Gửi
+							</span>
+						</button>
+					</p>
+				</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+</div>

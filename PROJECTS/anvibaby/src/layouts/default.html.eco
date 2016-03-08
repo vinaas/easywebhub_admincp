@@ -1,0 +1,460 @@
+---
+layout: containersidebar
+---
+
+<div id="center_column" class="center_column col-xs-12 col-sm-9">
+  <div class="pos_center_column">
+    <div class=" pos_bannerslide">
+      <div class="pos_slideshow">
+        <div class="pos-slideshow">
+          <div class="flexslider ma-nivoslider">
+            <div class="pos-loading"></div>
+
+            <div id="pos-slideshow-home" class="slides">
+              <a href="#">
+                <img style="display:none" src="img/slider/slider-1.jpg" data-thumb="img/slider/slider-1.jpg" alt="" title="" />
+              </a>
+              <a href="#">
+                <img style="display:none" src="img/slider/slider-2.jpg" data-thumb="img/slider/slider-2.jpg" alt="" title="" />
+              </a>
+            </div>
+            <div id="htmlcaption3" class="pos-slideshow-caption nivo-html-caption nivo-caption">
+              <div class="timethai" style="
+      position:absolute;
+      z-index:99;
+      top:0;
+      left:0;
+      background-color: rgba(49, 56, 72, 0.298);
+      height:5px;
+      -webkit-animation: myfirst 6000ms ease-in-out;
+      -moz-animation: myfirst 6000ms ease-in-out;
+      -ms-animation: myfirst 6000ms ease-in-out;
+      animation: myfirst 6000ms ease-in-out;
+
+    ">
+              </div>
+
+              <div class="pos-slideshow-content ">
+                <div class="container">
+                  <div class="pos-slideshow-title">
+                    <h3>Thời trang trẻ em Việt Nam</h3>
+                  </div>
+                  <div class="pos_description">
+                    <h2 class="title2">Nét đẹp tuổi thơ</h2>
+                    <h3 class="title3">Miễn phí 100% phí vận chuyển</h3>
+                  </div>
+
+                  <div class="pos-slideshow-readmore">
+                    <a href="#">Mua ngay</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="htmlcaption4" class="pos-slideshow-caption nivo-html-caption nivo-caption">
+              <div class="timethai" style="
+      position:absolute;
+      z-index:99;
+      top:0;
+      left:0;
+      background-color: rgba(49, 56, 72, 0.298);
+      height:5px;
+      -webkit-animation: myfirst 6000ms ease-in-out;
+      -moz-animation: myfirst 6000ms ease-in-out;
+      -ms-animation: myfirst 6000ms ease-in-out;
+      animation: myfirst 6000ms ease-in-out;
+
+    ">
+              </div>
+
+              <div class="pos-slideshow-content ">
+                <div class="container">
+                  <div class="pos-slideshow-title">
+                    <h3>Thời trang trẻ em Việt Nam</h3>
+                  </div>
+                  <div class="pos_description">
+                    <h2 class="title2">Nét đẹp tuổi thơ</h2>
+                    <h3 class="title3">Miễn phí 100% phí vận chuyển</h3>
+                  </div>
+
+                  <div class="pos-slideshow-readmore">
+                    <a href="#">Mua ngay</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          $(window).load(function() {
+            $(document).off('mouseenter').on('mouseenter', '.pos-slideshow', function(e) {
+              $('.pos-slideshow .timethai').addClass('pos_hover');
+            });
+
+            $(document).off('mouseleave').on('mouseleave', '.pos-slideshow', function(e) {
+              $('.pos-slideshow .timethai').removeClass('pos_hover');
+            });
+            $('#pos-slideshow-home').nivoSlider({
+              effect: 'random',
+              slices: 15,
+              boxCols: 8,
+              boxRows: 4,
+              animSpeed: '600',
+              pauseTime: '6000',
+              startSlide: 1,
+              directionNav: 1,
+              controlNav: 1,
+              controlNavThumbs: false,
+              pauseOnHover: true,
+              manualAdvance: false,
+              prevText: '<i class="icon-chevron-left"></i>',
+              nextText: '<i class="icon-chevron-right"></i>',
+              afterLoad: function() {
+                $('.pos-loading').css("display", "none");
+              },
+              beforeChange: function() {
+                $('.bannerSlideshow1').removeClass("pos_in");
+                $('.bannerSlideshow2').removeClass("pos_in");
+                $('.bannerSlideshow3').removeClass("pos_in");
+              },
+              afterChange: function() {
+                $('.bannerSlideshow1').addClass("pos_in");
+                $('.bannerSlideshow2').addClass("pos_in");
+                $('.bannerSlideshow3').addClass("pos_in");
+              }
+            });
+          });
+        </script>
+
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $(".tab_content").hide();
+        $(".tab_content:first").show();
+
+        $("ul.tabs li").click(function() {
+          $("ul.tabs li").removeClass("active");
+          $(this).addClass("active");
+          $(".tab_content").hide();
+          $(".tab_content").removeClass("animate1 ");
+          var activeTab = $(this).attr("rel");
+          $("#" + activeTab).addClass("animate1 ");
+          $("#" + activeTab).fadeIn();
+        });
+      });
+    </script>
+    <div class="product-tabs-container-slider">
+      <ul class="tabs">
+        <li class="first_item item  active " rel="tab_new_product">
+          Hàng mới
+        </li>
+        <li class="last_item item " rel="tab_besseller_product">
+          Bán chạy nhất
+        </li>
+
+      </ul>
+
+      <div class="tab_container">
+        <div id="tab_new_product" class="tab_content">
+          <div class="row pos-content">
+            <div class="productTabContent">
+              <% for item in [0...@getCollection('products').length]: %>
+                <% product = @getCollection('products').toJSON()[item] %>
+                  <% if item %% 2 is 0: %>
+                    <div class="tabslider_item">
+                      <% end %>
+                        <div class="item-product">
+                          <div class="products-inner">
+                            <a class="tabproduct-img product_image" href="<%= product.url %>" title="<%= product.title %>">
+                              <img class="replace-2x img-responsive" src="<%= product.images[0].thickbox %>" alt="" />
+                            </a>
+
+                          </div>
+                          <div class="product-contents">
+
+                            <h5 class="product-name">
+                              <a class="product-name" href="<%= product.images[0].thickbox %>" title="<%= product.title %>">
+                                <%= product.title %>
+                              </a>
+                            </h5>
+                            <div class="price-box">
+                              <span class="price product-price">
+                                <%= product.price %>
+                              </span>
+
+                              <span class="old-price product-price">
+                                <%= product.old_price %>
+                              </span>
+
+                              <!-- <span class="price-percent-reduction">-20%</span> -->
+                            </div>
+
+                            <a class="new-box" href="<%= product.url %>">
+                              <span class="new-label">Mới</span>
+                            </a>
+
+                            <!-- <a class="sale-box" href="<%= product.url %>">
+                              <span class="sale-label">Sale!</span>
+                            </a> -->
+
+                          </div>
+                        </div>
+                        <% if item %% 2 isnt 0: %>
+                    </div>
+                    <% end %>
+                      <% end %>
+
+            </div>
+            <div class="boxprevnext">
+              <a class="prev prevtabslider"></a>
+              <a class="next nexttabslider"></a>
+            </div>
+          </div>
+        </div>
+        <div id="tab_besseller_product" class="tab_content">
+          <div class="row pos-content">
+            <div class="productTabContent">
+              <% for item1 in [0...@getCollection("html").findAllLive({bestseller:true}).length]: %>
+                <% product1 = @getCollection("html").findAllLive({bestseller:true}).toJSON()[item1] %>
+                    <% if item1 %% 2 is 0: %>
+                    <div class="tabslider_item">
+                    <% end %>
+                        <div class="item-product">
+                          <div class="products-inner">
+                            <a class="tabproduct-img product_image" href="<%= product1.url %>" title="<%= product1.title %>">
+                              <img class="replace-2x img-responsive" src="<%= product1.images[0].thickbox %>" alt="" />
+                            </a>
+
+                          </div>
+                          <div class="product-contents">
+                            <h5 class="product-name">
+                              <a class="product-name" href="kids-beds/2-blouse.html" title="<%= product1.title %>">
+                                <%= product1.title %>
+                              </a>
+                            </h5>
+                            <div class="price-box">
+                              <span class="price product-price">
+                                <%= product1.price %>
+                              </span>
+                            </div>
+                            <a class="sale-box" href="kids-beds/5-printed-summer-dress.html">
+                                <span class="sale-label">Sale!</span>
+                            </a>
+                          </div>
+                        </div>
+                    <% if item1 %% 2 isnt 0: %>
+                    </div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="boxprevnext">
+              <a class="prev prevtabslider"></a>
+              <a class="next nexttabslider"></a>
+            </div>
+          </div>
+        </div>
+</div>
+
+      </div>
+      <!-- .tab_container -->
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        var owl = $(".productTabContent");
+        owl.owlCarousel({
+          items: 4,
+          slideSpeed: 1000,
+          pagination: false,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [991, 2],
+          itemsTablet: [767, 2],
+          itemsMobile: [480, 1]
+        });
+        $(".nexttabslider").click(function() {
+          owl.trigger('owl.next');
+        })
+        $(".prevtabslider").click(function() {
+          owl.trigger('owl.prev');
+        })
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var owl = $(".featureSlide");
+        owl.owlCarousel({
+          items: 4,
+          slideSpeed: 1000,
+          pagination: false,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [991, 2],
+          itemsTablet: [767, 2],
+          itemsMobile: [480, 1],
+          autoPlay: false,
+        });
+
+        // Custom Navigation Events
+        $(".nextfure").click(function() {
+          owl.trigger('owl.next');
+        })
+        $(".prevfure").click(function() {
+          owl.trigger('owl.prev');
+        })
+      });
+    </script>
+
+
+    <div class="background-position">
+      <div class="block-smartblog">
+        <div class="blog-title">
+          <h2>
+            <a href="smartblog.html">
+              <span>Hướng dẫn sử dụng các loại tả!</span>
+            </a>
+          </h2>
+        </div>
+        <div class="row pos-content">
+          <div class="sdsblog-box-content">
+
+            <% for tintuc in @getCollection("html").findAllLive({mucTintuc: "huongdan"}).toJSON(): %>
+
+            <div>
+
+              <div class="sds_blog_post">
+                <div class="news_module_image_holder">
+                  <a href="<%= tintuc.url %>">
+                    <img alt="<%= tintuc.title %>" class="feat_img_small" src="<%= tintuc.thumbnail %>">
+                  </a>
+                </div>
+                <div class="blog_content">
+                  <h2 class="sds_post_title"><a href="<%= tintuc.url %>"><%= tintuc.title %></a></h2>
+                  <span class="date-smart hidden"><%= tintuc.ctime %></span>
+                  <a href="<%= tintuc.url %>" class="r_more">Xem thêm</a>
+                  <p>
+                    <%= tintuc.sDescription %>
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+
+            <% end %>
+
+
+          </div>
+          <!-- <div class="boxprevnext">
+<a class="prev prevblog"></a>
+<a class="next nextblog"></a>
+</div>	 -->
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+
+          var owl = $(".sdsblog-box-content");
+
+          owl.owlCarousel({
+            autoPlay: false,
+            pagination: true,
+            items: 3,
+            slideSpeed: 1000,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [991, 3],
+            itemsTablet: [767, 2],
+            itemsMobile: [480, 1]
+          });
+          // Custom Navigation Events
+          $(".nextblog").click(function() {
+            owl.trigger('owl.next');
+          })
+          $(".prevblog").click(function() {
+            owl.trigger('owl.prev');
+          })
+        });
+      </script>
+    </div>
+  <br>
+  <br>
+  <br>
+
+
+    <div class="background-position">
+      <div class="block-smartblog">
+        <div class="blog-title">
+          <h2>
+            <a href="smartblog.html">
+              <span>Chuyên mục nuôi con !</span>
+            </a>
+          </h2>
+        </div>
+        <div class="row pos-content">
+          <div class="sdsblog-box-content">
+            <% for tintuc2 in @getCollection("html").findAllLive({mucTintuc: "camnang"}).toJSON(): %>
+
+            <div>
+
+              <div class="sds_blog_post">
+                <div class="news_module_image_holder">
+                  <a href="<%= tintuc2.url %>">
+                    <img alt="<%= tintuc2.title %>" class="feat_img_small" src="<%= tintuc2.thumbnail %>">
+                  </a>
+                </div>
+                <div class="blog_content">
+                  <h2 class="sds_post_title"><a href="<%= tintuc2.url %>"><%= tintuc2.title %></a></h2>
+                  <span class="date-smart hidden"><%= tintuc2.ctime %></span>
+                  <a href="<%= tintuc2.url %>" class="r_more">Xem thêm</a>
+                  <p>
+                    <%= tintuc2.sDescription %>
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+
+            <% end %>
+
+
+          </div>
+          <!-- <div class="boxprevnext">
+    <a class="prev prevblog"></a>
+    <a class="next nextblog"></a>
+    </div>	 -->
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+
+          var owl = $(".sdsblog-box-content");
+
+          owl.owlCarousel({
+            autoPlay: false,
+            pagination: true,
+            items: 3,
+            slideSpeed: 1000,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [991, 3],
+            itemsTablet: [767, 2],
+            itemsMobile: [480, 1]
+          });
+          // Custom Navigation Events
+          $(".nextblog").click(function() {
+            owl.trigger('owl.next');
+          })
+          $(".prevblog").click(function() {
+            owl.trigger('owl.prev');
+          })
+        });
+      </script>
+    </div>
+
+
+  </div>

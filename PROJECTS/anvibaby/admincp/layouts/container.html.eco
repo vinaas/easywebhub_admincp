@@ -1,0 +1,845 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-us"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="en-us"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="en-us"><![endif]-->
+<!--[if gt IE 8]> <html class="no-js ie9" lang="en-us"><![endif]-->
+<html lang="en-us">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    <%= @getPreparedTitle() %>
+  </title>
+  <meta name="description" content="<%= @getMetaDescription() %>" />
+  <meta name="generator" content="anvibaby" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <meta property="og:title" content="<%= @getPreparedTitle() %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="<%= @site.url %><%= @getMetaImage() %>" />
+  <meta property="og:url" content="<%= @site.url %><%- @document.url %>" />
+
+  <meta property="og:description" content="<%= @getMetaDescription() %>" />
+
+
+  <link rel="icon" type="image/vnd.microsoft.icon" href="" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="" />
+
+  <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="/css/global.css" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="/js/jquery/plugins/fancybox/jquery.fancybox.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/product_list.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/blockbestsellers/blockbestsellers.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/blockcart/blockcart.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/js/jquery/plugins/bxslider/jquery.bxslider.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/blockcategories/blockcategories.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/product.css" type="text/css" media="all" />
+
+
+  <link rel="stylesheet" href="/css/modules/blockcontact/blockcontact.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/blocktags/blocktags.css" type="text/css" media="all" />
+
+
+  <link rel="stylesheet" href="/css/modules/homefeatured/homefeatured.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/posmegamenu/css/custommenu.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/posslideshow/css/nivo-slider/nivo-slider.css" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="/css/modules/smartblog/css/smartblogstyle.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/postabproductslider/producttab.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/posvegamenu/css/posvegamenu.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/css/modules/productcomments/productcomments.css" type="text/css" media="all" />
+
+
+  <link rel="stylesheet" href="/css/animate.css" type="text/css" />
+
+  <link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
+
+  <script type="text/javascript">
+    var CUSTOMIZE_TEXTFIELD = 1;
+    var FancyboxI18nClose = 'Close';
+    var FancyboxI18nNext = 'Next';
+    var FancyboxI18nPrev = 'Previous';
+
+    var allowBuyWhenOutOfStock = false;
+    var contentOnly = false;
+  </script>
+
+  <script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="/js/jquery/plugins/jquery.easing.js"></script>
+
+  <script type="text/javascript" src="/js/tools.js"></script>
+  <script type="text/javascript" src="/js/global.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="/js/jquery/plugins/fancybox/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="/js/jquery/plugins/jquery.scrollTo.js"></script>
+  <script type="text/javascript" src="/js/jquery/plugins/jquery.serialScroll.js"></script>
+  <script type="text/javascript" src="/js/jquery/plugins/bxslider/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="/js/tools/treeManagement.js"></script>
+  <script type="text/javascript" src="/js/jquery.matchHeight.js"></script>
+
+  <script type="text/javascript" src="/js/jquery/plugins/jquery.sticky.js"></script>
+
+  <script type="text/javascript" src="/js/jquery/plugins/jquery.idTabs.js"></script>
+
+  <script type="text/javascript" src="/js/modules/posmegamenu/js/custommenu.js"></script>
+  <script type="text/javascript" src="/js/modules/posmegamenu/js/mobile_menu.js"></script>
+  <script type="text/javascript" src="/js/modules/posslideshow/js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript" src="/js/modules/posscroll/scrolltop.js"></script>
+  <script type="text/javascript" src="/js/jquery/plugins/autocomplete/jquery.autocomplete.js"></script>
+
+  <script type="text/javascript" src="/js/modules/productcomments/js/jquery.rating.pack.js"></script>
+  <script type="text/javascript" src="/js/modules/productcomments/js/jquery.textareaCounter.plugin.js"></script>
+  <script type="text/javascript" src="/js/modules/productcomments/js/productcomments.js"></script>
+
+  <script type="text/javascript" src="/js/index.js"></script>
+  <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+  <script src="/js/owl.carousel.js" type="text/javascript"></script>
+
+  <script type="text/javascript" src="/js/product.js"></script>
+
+</head>
+
+
+
+<body itemscope itemtype="http://schema.org/WebPage" id="index" class="index show-left-column hide-right-column lang_en">
+
+
+
+  <div id="page">
+    <div class="header-container">
+      <header id="header">
+        <div class="banner">
+          <div class="container">
+            <div class="row">
+
+            </div>
+          </div>
+        </div>
+        <div class="nav">
+
+          <div class="container">
+            <div class="row">
+              <nav>
+
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-middle">
+          <div class="container">
+            <div class="row">
+              <div id="header_logo" class="col-xs-12 col-md-3 col-sm-12">
+                <a href="/" title="">
+                  <img class="logo img-responsive" src="/img/logo/logo.png" alt="pos_Beestore" width="288" height="70" />
+                </a>
+              </div>
+              <div class="header-middle-right col-xs-12 col-md-9 col-sm-12">
+                <!-- Block search module TOP -->
+                <div class=" block-search col-xs-12">
+
+                  <div class="services-block hidden-xs">
+
+                    <div class="row">
+                      <div class="col-md-1"></div>
+                      <div class="col-xs-12 col-md-12">
+                        <div class="clearfix services-block-bg">
+                          <div class="block-service-item">
+                            <i class="fa fa-mobile"></i>
+                            <span class="title">0935.258.885 </span>
+                            <span class="description">0973.260.062</span>
+                          </div>
+
+                          <div class="block-service-item">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="title">Thứ 2-7 : 08:00 - 20:00</span>
+                            <span class="description">Chủ Nhật : 09:00-17:00</span>
+                          </div>
+
+
+                          <div class="block-service-item">
+                            <i class="fa fa-truck"></i>
+                            <span class="title">Free ship  </span>
+                            <span class="description">đơn hàng > 400k</span>
+                          </div>
+
+                           <div class="block-service-item">
+                            <i class="fa fa-money"></i>
+                            <span class="title">COD Nhận hàng </span>
+                            <span class="description">- Trả tiền</span>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
+
+                      <div class="col-md-3 col-xs-12 hidden" style="padding-right: 0">
+                        <div class="cart_block_top clearfix hidden-sm">
+                          <div class="shopping_cart" style="display:none">
+                            <a href="../order.html" title="View my shopping cart" rel="nofollow">
+                              <b>Giỏ hàng</b>
+                              <span class="ajax_cart_quantity">2</span>
+                              <span class="ajax_cart_product_txt unvisible">Product</span>
+                              <span class="ajax_cart_product_txt_s">Products</span>
+                              <span class="ajax_cart_total">
+                                250.000 Đ
+                              </span>
+                              <span class="ajax_cart_no_product unvisible">0</span>
+                            </a>
+                            <div class="cart_block block exclusive" style="display: none;">
+                              <div class="block_content">
+                                <!-- block list of products -->
+                                <div class="cart_block_list">
+                                  <dl class="products">
+                                    <dt data-id="cart_block_product_5_19_0" class="first_item">
+                                      <a class="cart-images" href="5-printed-summer-dress.html" title="Ong vàng">
+                                        <img src="/img/product/img7.jpg" alt="Ong vàng" width="80">
+                                      </a>
+                                      <div class="cart-info">
+                                        <div class="product-name">
+                                          <span class="quantity-formated">
+                                            <span class="quantity">1</span>&nbsp;x&nbsp;</span><a class="cart_block_product_name" href="5-printed-summer-dress.html#/size-s/color-yellow" title="Ong vàng">Printed...</a>
+                                        </div>
+                                        <div class="product-atributes">
+                                          <a href="5-printed-summer-dress.html#/size-s/color-yellow" title="Product detail">S, Yellow</a>
+                                        </div>
+                                        <span class="price">
+                                          250.000 Đ
+
+
+                                        </span>
+                                      </div>
+                                      <span class="remove_link">
+                                        <a class="ajax_cart_block_remove_link" href="../order62d3.html?delete=1&amp;id_product=5&amp;ipa=19&amp;id_address_delivery=0&amp;token=df3620515d01510675e74506788f04a5" rel="nofollow" title="remove this product from my cart">&nbsp;</a>
+                                      </span>
+                                    </dt>
+                                    <dd data-id="cart_block_combination_of_5_19_0" class="first_item">
+                                      <!-- Customizable datas -->
+                                    </dd>
+                                    <dt data-id="cart_block_product_12_78_0" class="last_item">
+                                      <a class="cart-images" href="12-printed-summer-dress.html" title="Ong vàng">
+                                        <img src="/img/product/img7.jpg" width="80" alt="Ong vàng">
+                                      </a>
+                                      <div class="cart-info">
+                                        <div class="product-name">
+                                          <span class="quantity-formated">
+                                            <span class="quantity">1</span>&nbsp;x&nbsp;</span><a class="cart_block_product_name" href="12-printed-summer-dress.html#/size-s/color-yellow" title="Ong vàng">Printed...</a>
+                                        </div>
+                                        <div class="product-atributes">
+                                          <a href="12-printed-summer-dress.html#/size-s/color-yellow" title="Product detail">S, Yellow</a>
+                                        </div>
+                                        <span class="price">
+                                          250.000 Đ
+
+
+                                        </span>
+                                      </div>
+                                      <span class="remove_link">
+                                        <a class="ajax_cart_block_remove_link" href="../order9543.html?delete=1&amp;id_product=12&amp;ipa=78&amp;id_address_delivery=0&amp;token=df3620515d01510675e74506788f04a5" rel="nofollow" title="remove this product from my cart">&nbsp;</a>
+                                      </span>
+                                    </dt>
+                                    <dd data-id="cart_block_combination_of_12_78_0" class="last_item">
+                                      <!-- Customizable datas -->
+                                    </dd>
+                                  </dl>
+                                  <p class="cart_block_no_products unvisible">
+                                    No products
+                                  </p>
+                                  <div class="cart-prices">
+                                    <div class="cart-prices-line first-line">
+                                      <span class="price cart_block_shipping_cost ajax_cart_shipping_cost unvisible">
+                                        To be determined </span>
+                                      <span class="unvisible">
+                                        Shipping
+                                      </span>
+                                    </div>
+                                    <div class="cart-prices-line last-line">
+                                      <span class="price cart_block_total ajax_block_cart_total">250.000 Đ</span>
+                                      <span>Tổng cộng : </span>
+                                    </div>
+                                  </div>
+                                  <p class="cart-buttons">
+                                    <a id="button_order_cart" class="btn btn-default button button-small" href="../order.html" title="Check out" rel="nofollow">
+                                      <span>
+                                        Đặt hàng<i class="icon-chevron-right right"></i>
+                                      </span>
+                                    </a>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- .cart_block -->
+                          </div>
+                        </div>
+
+                        <div id="layer_cart">
+                          <div class="clearfix">
+                            <div class="layer_cart_product col-xs-12 col-md-6">
+                              <span class="cross" title="Close window"></span>
+                              <h2>
+                                <i class="icon-check"></i>Product successfully added to your shopping cart
+                              </h2>
+                              <div class="product-image-container layer_cart_img">
+                              </div>
+                              <div class="layer_cart_product_info">
+                                <span id="layer_cart_product_title" class="product-name"></span>
+                                <span id="layer_cart_product_attributes"></span>
+                                <div>
+                                  <strong class="dark">Quantity</strong>
+                                  <span id="layer_cart_product_quantity"></span>
+                                </div>
+                                <div>
+                                  <strong class="dark">Total</strong>
+                                  <span id="layer_cart_product_price"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="layer_cart_cart col-xs-12 col-md-6">
+                              <h2>
+                                <!-- Plural Case [both cases are needed because page may be updated in Javascript] -->
+                                <span class="ajax_cart_product_txt_s  unvisible">
+                                  There are
+                                  <span class="ajax_cart_quantity">0</span> items in your cart.
+                                </span>
+                                <!-- Singular Case [both cases are needed because page may be updated in Javascript] -->
+                                <span class="ajax_cart_product_txt ">
+                                  There is 1 item in your cart.
+                                </span>
+                              </h2>
+
+                              <div class="layer_cart_row">
+                                <strong class="dark">
+                                  Total products (tax incl.)
+                                </strong>
+                                <span class="ajax_block_products_total">
+                                </span>
+                              </div>
+
+                              <div class="layer_cart_row">
+                                <strong class="dark unvisible">
+                                  Total shipping&nbsp;(tax incl.) </strong>
+                                <span class="ajax_cart_shipping_cost unvisible">
+                                  To be determined </span>
+                              </div>
+                              <div class="layer_cart_row">
+                                <strong class="dark">
+                                  Total (tax incl.)
+                                </strong>
+                                <span class="ajax_block_cart_total">
+                                </span>
+                              </div>
+                              <div class="button-container">
+                                <span class="continue btn btn-default button exclusive-medium" title="Continue shopping">
+                                  <span>
+                                    <i class="icon-chevron-left left"></i>Continue shopping
+                                  </span>
+                                </span>
+                                <a class="btn btn-default button button-medium" href="order.html" title="Proceed to checkout" rel="nofollow">
+                                  <span>
+                                    Proceed to checkout<i class="icon-chevron-right right"></i>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="crossseling"></div>
+                        </div>
+                        <!-- #layer_cart -->
+                        <div class="layer_cart_overlay"></div>
+
+                        <!-- /MODULE Block cart -->
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- /Block search module TOP -->
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="posmegamenu col-xs-12 col-md-12 col-sm-12">
+                <%- @partial('navigation') %>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </header>
+
+    </div>
+    <div class="container text-run">
+<marquee width="100%">“LÌ XÌ ĐẦU NĂM CHO CÁC KHÁCH SỈ VÀ NHÀ PHÂN PHỐI
+Mọi đơn hàng lẻ >=2 bộ trong tháng 02/2016 đều được free ship mọi miền tổ quốc.”
+</marquee>
+</div>
+
+    <div class="columns-container">
+
+      <%- @content %>
+
+    </div>
+    <!-- .columns-container -->
+    <!-- Footer -->
+    <div class="footer-container">
+      <div class="footer-container">
+        <footer id="footer">
+          <div class="footer-static-top">
+
+          </div>
+          <div class="footer-static-middle">
+
+            <div class="container">
+              <div class="background-position">
+                <div class="row">
+                  <div class="col-xs-12 col-md-12 col-sm-12">
+                    <div class="pos-logo-container">
+
+                      <div class="container-inner">
+                        <div class="pos-logo">
+                          <div class="pos-logo-title">
+                            <h2>
+                              <span>Our Brands</span>
+                            </h2>
+                          </div>
+                          <div class="row pos-content">
+                            <div class="logo-slider">
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/1.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/2.jpg" alt="Logo" />
+                              </div>
+
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/4.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/5.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/6.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/7.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/8.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/9.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/10.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/11.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/12.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/13.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/14.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/15.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/16.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/17.jpg" alt="Logo" />
+                              </div>
+                              <div class="item-banklogo">
+                                  <img class="replace-2x img-responsive" src="/img/blocklogo/18.jpg" alt="Logo" />
+                              </div>
+
+                            </div>
+                            <div class="boxprevnext">
+                              <a class="prev prevlogo"></a>
+                              <a class="next nextlogo"></a>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </div>
+                      <script type="text/javascript">
+                        $(document).ready(function() {
+                          var owl = $(".logo-slider");
+                          owl.owlCarousel({
+                            items: 6,
+                            slideSpeed: 1000,
+                            pagination: false,
+                            itemsDesktop: [1199, 5],
+                            itemsDesktopSmall: [911, 4],
+                            itemsTablet: [767, 3],
+                            itemsMobile: [360, 2],
+                           autoPlay: 5000,
+
+                          });
+                          $(".nextlogo").click(function() {
+                            owl.trigger('owl.next');
+                          })
+                          $(".prevlogo").click(function() {
+                            owl.trigger('owl.prev');
+                          })
+                        });
+                      </script>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class=" col-sm-6 col-md-4 col-xs-12">
+                    <div class="footer-static">
+                      <div class="footer-block">
+                        <div class="logo-footer">
+                          <a href="#">
+                            <img src="/img/logo/anvibaby-logo.jpg" alt="" width="200" />
+                          </a>
+                        </div>
+                        <div class="footer-static-content">
+                          <ul class=" contact_us block_content toggle-footer">
+                            <li class="address add">Địa chỉ:
+                              <span> 373/182 Lý Thường Kiệt -Tân Bình-Tp.HCM</span>
+                            </li>
+                            <li class="phone add">ĐT : 0973.260.062 -0935.258.885</span>
+                            </li>
+                            <li class="email add" style="text-transform: none;">Email: <a href="mailto:tavaianvibaby@gmail.com"> tavaianvibaby@gmail.com</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <section id="social_block">
+                        <ul>
+                          <li class="facebook">
+                            <a class="_blank" href="https://www.facebook.com/">
+                              <span>Facebook</span>
+                              <span class="tooltip">Facebook</span>
+                            </a>
+                          </li>
+                          <li class="twitter">
+                            <a class="_blank" href="https://twitter.com/">
+                              <span>Twitter</span>
+                              <span class="tooltip">Twitter</span>
+                            </a>
+                          </li>
+
+                          <li class="youtube">
+                            <a class="_blank" href="https://www.youtube.com/user/">
+                              <span>Youtube</span>
+                              <span class="tooltip">Youtube</span>
+                            </a>
+                          </li>
+                          <li class="google-plus">
+                            <a class="_blank" href="">
+                              <span>Google Plus</span>
+                              <span class="tooltip">Google Plus</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <h4>Follow us</h4>
+                      </section>
+
+                      <div class="clearfix"></div>
+
+                    </div>
+
+
+                  </div>
+                  <div class="footer-static">
+
+                    <!-- MODULE Block footer -->
+                    <section class="footer-block col-xs-12 col-sm-6 col-md-2" id="block_various_links_footer">
+                      <h4>Thông tin</h4>
+                      <ul class="toggle-footer">
+
+                        <li class="item">
+                          <a href="new-products.html" title="New products">
+                                                      Sản phẩm mới
+                                                  </a>
+                        </li>
+                        <li class="item">
+                          <a href="best-sales.html" title="Best sellers">
+                                                      Best sellers
+                                                  </a>
+                        </li>
+                        <li class="item">
+                          <a href="stores.html" title="Our stores">
+                                                      Thông tin cửa hàng
+                                                  </a>
+                        </li>
+                        <li class="item">
+                          <a href="contact-us.html" title="Contact us">
+                                                      Liên hệ
+                                                  </a>
+                        </li>
+                        <li>
+                          <a href="sitemap.html" title="Sitemap">
+                                                      Sitemap
+                                                  </a>
+                        </li>
+                      </ul>
+
+                    </section>
+                    <!-- Block myaccount module -->
+                    <section class=" my-account footer-block col-xs-12 col-sm-6 col-md-2">
+                      <h4><a href="#" title="Manage my customer account" rel="nofollow">Tài khoản</a></h4>
+                      <div class="block_content toggle-footer">
+                        <ul class="bullet">
+                          <li><a href="#" title="My orders" rel="nofollow">Đơn hàng</a></li>
+                          <li><a href="#" title="Manage my personal information" rel="nofollow">Thông tin tài khoản</a></li>
+                        </ul>
+                      </div>
+                    </section>
+                    <!-- /Block myaccount module -->
+
+
+                    <!-- End Map -->
+
+
+                    <div class=" static-footer  footer-block col-sm-6 col-md-4 col-xs-12">
+                      <h4 class="footer-static-title">Bản đồ</h4>
+                      <!-- Google Map -->
+                      <script src="http://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+
+                      <!-- Start Map -->
+                      <div id="map" data-position-latitude="10.779618" data-position-longitude="106.650876" data-marker-img="/img/marker.png"></div>
+                      <script>
+                        (function($) {
+                          $.fn.CustomMap = function(options) {
+
+                            var posLatitude = $('#map').data('position-latitude'),
+                              posLongitude = $('#map').data('position-longitude');
+
+                            var settings = $.extend({
+                              home: {
+                                latitude: posLatitude,
+                                longitude: posLongitude
+                              },
+                              text: '<div class="map-popup"><h4>Anvi Baby</h4><p>373/182 Lý Thường Kiệt -Tân Bình-Tp.HCM</p></div>',
+                              icon_url: $('#map').data('marker-img'),
+                              zoom: 15
+                            }, options);
+
+                            var coords = new google.maps.LatLng(settings.home.latitude, settings.home.longitude);
+
+                            return this.each(function() {
+                              var element = $(this);
+
+                              var options = {
+                                zoom: settings.zoom,
+                                center: coords,
+                                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                mapTypeControl: false,
+                                scaleControl: false,
+                                streetViewControl: false,
+                                panControl: true,
+                                disableDefaultUI: true,
+                                zoomControlOptions: {
+                                  style: google.maps.ZoomControlStyle.DEFAULT
+                                },
+                                overviewMapControl: true,
+                              };
+
+                              var map = new google.maps.Map(element[0], options);
+
+                              var icon = {
+                                url: settings.icon_url,
+                                origin: new google.maps.Point(0, 0)
+                              };
+
+                              var marker = new google.maps.Marker({
+                                position: coords,
+                                map: map,
+                                icon: icon,
+                                draggable: false
+                              });
+
+                              var info = new google.maps.InfoWindow({
+                                content: settings.text
+                              });
+
+                              google.maps.event.addListener(marker, 'click', function() {
+                                info.open(map, marker);
+                              });
+
+                              var styles = [{
+                                "featureType": "landscape",
+                                "stylers": [{
+                                  "saturation": -100
+                                }, {
+                                  "lightness": 65
+                                }, {
+                                  "visibility": "on"
+                                }]
+                              }, {
+                                "featureType": "poi",
+                                "stylers": [{
+                                  "saturation": -100
+                                }, {
+                                  "lightness": 51
+                                }, {
+                                  "visibility": "simplified"
+                                }]
+                              }, {
+                                "featureType": "road.highway",
+                                "stylers": [{
+                                  "saturation": -100
+                                }, {
+                                  "visibility": "simplified"
+                                }]
+                              }, {
+                                "featureType": "road.arterial",
+                                "stylers": [{
+                                  "saturation": -100
+                                }, {
+                                  "lightness": 30
+                                }, {
+                                  "visibility": "on"
+                                }]
+                              }, {
+                                "featureType": "road.local",
+                                "stylers": [{
+                                  "saturation": -100
+                                }, {
+                                  "lightness": 40
+                                }, {
+                                  "visibility": "on"
+                                }]
+                              }, {
+                                "featureType": "transit",
+                                "stylers": [{
+                                  "saturation": -100
+                                }, {
+                                  "visibility": "simplified"
+                                }]
+                              }, {
+                                "featureType": "administrative.province",
+                                "stylers": [{
+                                  "visibility": "on"
+                                }]
+                              }, {
+                                "featureType": "water",
+                                "elementType": "labels",
+                                "stylers": [{
+                                  "visibility": "on"
+                                }, {
+                                  "lightness": -25
+                                }, {
+                                  "saturation": -100
+                                }]
+                              }, {
+                                "featureType": "water",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                  "hue": "#ffff00"
+                                }, {
+                                  "lightness": -25
+                                }, {
+                                  "saturation": -97
+                                }]
+                              }];
+
+                              map.setOptions({
+                                styles: styles
+                              });
+                            });
+
+                          };
+                        }(jQuery));
+
+                        jQuery(document).ready(function() {
+                          jQuery('#map').CustomMap();
+                        });
+                      </script>
+                      <!-- End Google Map -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-static-bottom">
+            <div class="container">
+              <div class="background-position">
+                <div class="row">
+                  <div class="footer-static">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <address>Copyright <i class="icon-copyright"></i> <%= @currentYear() %> <a href="http://vinaas.com/">VinaAS</a>. All Rights Reserved</address>
+                    </div>
+                  </div>
+
+
+                  <div class="back-top">
+                    <a href="#" class="mypresta_scrollup hidden-phone"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- #footer -->
+    </div>
+    <!-- #page -->
+
+    <script>
+      $(document).ready(function() {
+        $(function() {
+          $("[data-toggle='tooltip']").tooltip();
+          $(".cart_block_top").sticky({
+            topSpacing: 0
+          });
+          $(".posmegamenu").sticky({
+            topSpacing: 0
+          });
+        });
+
+        $(".fancybox-fast-view").fancybox({
+          padding:  '0',
+          width: 960,
+          autoSize: false,
+          autoHeight: true,
+          title: '',
+          tpl: {
+            error: '<p class="fancybox-error">Nội dung không hiển thị<br/>Vui lòng xem lại.</p>',
+            closeBtn: '<a title="Đóng cửa sổ" class="pop-up-close" href="javascript:;"><i class="fa fa-times"></i></a>'
+          }
+        });
+      });
+
+
+
+    </script>
+
+</body>
+</html>

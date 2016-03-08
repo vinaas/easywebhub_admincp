@@ -1,0 +1,3511 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-us"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="en-us"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="en-us"><![endif]-->
+<!--[if gt IE 8]> <html class="no-js ie9" lang="en-us"><![endif]-->
+<html lang="en-us">
+
+<!-- Mirrored from demo.posthemes.com/pos_beestore/layout2/en/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Nov 2015 05:21:08 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    <%= @site.url %>
+  </title>
+  <meta name="description" content="Shop powered by PrestaShop" />
+  <meta name="generator" content="PrestaShop" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="icon" href="/favicon.ico?1446569232" />
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/global.css" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="js/jquery/plugins/fancybox/jquery.fancybox.css" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="css/product_list.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockbestsellers/blockbestsellers.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockcart/blockcart.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="js/jquery/plugins/bxslider/jquery.bxslider.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockcategories/blockcategories.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockcurrencies/blockcurrencies.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blocklanguages/blocklanguages.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockcontact/blockcontact.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockmyaccountfooter/blockmyaccount.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blocknewsletter/blocknewsletter.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blocktags/blocktags.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockuserinfo/blockuserinfo.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/homefeatured/homefeatured.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blockwishlist/blockwishlist.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/posmegamenu/css/custommenu.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/posslideshow/css/nivo-slider/nivo-slider.css" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="css/modules/smartblog/css/smartblogstyle.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/blocksearch/blocksearch.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="js/jquery/plugins/autocomplete/jquery.autocomplete.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/postabproductslider/producttab.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/posvegamenu/css/posvegamenu.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/modules/productcomments/productcomments.css" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
+
+
+  <style>
+
+  </style>
+
+  <script type="text/javascript">
+    var FancyboxI18nClose = 'Close';
+    var FancyboxI18nNext = 'Next';
+    var FancyboxI18nPrev = 'Previous';
+  </script>
+
+  <script type="text/javascript" src="js/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery/plugins/jquery.easing.js"></script>
+
+  <script type="text/javascript" src="js/tools.js"></script>
+  <script type="text/javascript" src="js/global.js"></script>
+
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery/plugins/fancybox/jquery.fancybox.js"></script>
+
+  <script type="text/javascript" src="js/jquery/plugins/jquery.scrollTo.js"></script>
+  <script type="text/javascript" src="js/jquery/plugins/jquery.serialScroll.js"></script>
+  <script type="text/javascript" src="js/jquery/plugins/bxslider/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="js/tools/treeManagement.js"></script>
+
+  <script type="text/javascript" src="js/jquery/plugins/jquery.sticky.js"></script>
+
+  <script type="text/javascript" src="js/modules/blockcart/ajax-cart.js"></script>
+
+  <script type="text/javascript" src="js/modules/posmegamenu/js/custommenu.js"></script>
+  <script type="text/javascript" src="js/modules/posmegamenu/js/mobile_menu.js"></script>
+
+  <script type="text/javascript" src="js/modules/posslideshow/js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript" src="js/modules/posscroll/scrolltop.js"></script>
+  <script type="text/javascript" src="js/jquery/plugins/autocomplete/jquery.autocomplete.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script src="js/owl.carousel.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,600&amp;subset=latin,latin-ext" type="text/css" media="all" />
+  <!--[if IE 8]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+
+
+<body itemscope itemtype="http://schema.org/WebPage" id="index" class="index show-left-column hide-right-column lang_en">
+  <div id="page">
+    <div class="header-container">
+      <header id="header">
+        <div class="banner">
+          <div class="container">
+            <div class="row">
+
+            </div>
+          </div>
+        </div>
+        <div class="nav">
+
+          <div class="container">
+            <div class="row">
+              <nav>
+                <!-- Block user information module NAV  -->
+
+                <!-- 	<div class="poswelcome">
+								<p class="welcome-msg">Default welcome msg! </p>
+				</div> -->
+
+                <!--<div class="header_userinfo">
+                                    <div class="mobile-userinfo">
+                                        <div class=" top-menu current">
+                                            <span>Tài khoản</span>
+                                        </div>
+                                        <ul id="header_links_vertical" class=" vertical-link header_links_ul toogle_content">
+                                            <li class="first"><a class="link-myaccount" href="loginfd9a.html" title="My account">
+					Tài khoản
+				</a></li>
+                                            <li><a class="link-wishlist wishlist_block" href="login731b.html" title="My wishlist">
+				Mong muốn</a></li>
+                                            &lt;!&ndash; 				<li><a class="link-mycart" href="http://demo.posthemes.com/pos_beestore/layout2/en/order" title="My cart">
+					My cart</a></li>
+				 &ndash;&gt;
+                                            <li><a class="link-checkout" href="order.html" title="checkout">Thanh toán</a></li>
+                                            <li>
+                                                <a class="login" href="loginfd9a.html" rel="nofollow" title="Log in to your customer account">
+						Đăng xuất
+					</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>-->
+
+
+
+                <!-- /Block usmodule NAV -->
+                <!-- Block languages module -->
+                <!--<div id="languages-block-top" class="languages-block">
+                                    <div class="current">
+                                        <span>English</span>
+                                    </div>
+                                    <ul id="first-languages" class="languages-block_ul toogle_content">
+                                        <li class="selected">
+                                            <span>English</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://demo.posthemes.com/pos_beestore/layout2/ar/" title="اللغة العربية (Arabic)">
+                                                <span>اللغة العربية</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>-->
+                <!-- /Block languages module -->
+                <!-- Block currencies module -->
+                <!--<div id="currencies-block-top">
+                                    <form id="setCurrency" action="http://demo.posthemes.com/pos_beestore/layout2/en/" method="post">
+                                        <div class="current">
+                                            <input type="hidden" name="id_currency" id="id_currency" value="" />
+                                            <input type="hidden" name="SubmitCurrency" value="" />
+                                            <span class="cur-label">Currency :</span>
+                                            <strong>GBP</strong> </div>
+                                        <ul id="first-currencies" class="currencies_ul toogle_content">
+                                            <li>
+                                                <a href="javascript:setCurrency(2);" rel="nofollow" title="Dollar (usd)">
+							Dollar (usd)
+						</a>
+                                            </li>
+                                            <li class="selected">
+                                                <a href="javascript:setCurrency(1);" rel="nofollow" title="Pound (GBP)">
+							Pound (GBP)
+						</a>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>-->
+                <!-- /Block currencies module -->
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-middle">
+          <div class="container">
+            <div class="row">
+              <div id="header_logo" class="col-xs-12 col-md-3 col-sm-12">
+                <a href="http://demo.posthemes.com/pos_beestore/layout2/" title="pos_Beestore">
+                  <img class="logo img-responsive" src="img/logo/logo.png" alt="pos_Beestore" width="288" height="70" />
+                </a>
+              </div>
+              <div class="header-middle-right col-xs-12 col-md-9 col-sm-12">
+                <!-- Block search module TOP -->
+                <div class=" block-search col-xs-12">
+
+                  <div class="services-block hidden-xs">
+
+                    <div class="row">
+                      <div class="col-md-1"></div>
+                      <div class="col-xs-12 col-md-8">
+                        <div class="clearfix services-block-bg">
+                          <div class="block-service-item">
+                            <i class="fa fa-mobile"></i>
+                            <span class="title">0935.258.885 </span>
+                            <span class="description">0973.260.062</span>
+                          </div>
+
+                          <div class="block-service-item">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="title">Thứ 2-7 : 08:00 - 20:00</span>
+                            <span class="description">Chủ Nhật : 09:00-17:00</span>
+                          </div>
+
+
+                          <div class="block-service-item">
+                            <i class="fa fa-truck"></i>
+                            <span class="title">Miễn Phí </span>
+                            <span class="description">Vận chuyển</span>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
+
+                      <div class="col-md-3 col-xs-12" style="padding-right: 0">
+                        <div class="cart_block_top clearfix hidden-sm">
+                          <div class="shopping_cart">
+                            <a href="../order.html" title="View my shopping cart" rel="nofollow">
+                              <b>Giỏ hàng</b>
+                              <span class="ajax_cart_quantity">2</span>
+                              <span class="ajax_cart_product_txt unvisible">Product</span>
+                              <span class="ajax_cart_product_txt_s">Products</span>
+                              <span class="ajax_cart_total">
+                                250.000 Đ
+                              </span>
+                              <span class="ajax_cart_no_product unvisible">0</span>
+                            </a>
+                            <div class="cart_block block exclusive" style="display: none;">
+                              <div class="block_content">
+                                <!-- block list of products -->
+                                <div class="cart_block_list">
+                                  <dl class="products">
+                                    <dt data-id="cart_block_product_5_19_0" class="first_item">
+                                      <a class="cart-images" href="5-printed-summer-dress.html" title="Ong vàng">
+                                        <img src="img/product/img7.jpg" alt="Ong vàng" width="80">
+                                      </a>
+                                      <div class="cart-info">
+                                        <div class="product-name">
+                                          <span class="quantity-formated">
+                                            <span class="quantity">1</span>&nbsp;x&nbsp;</span><a class="cart_block_product_name" href="5-printed-summer-dress.html#/size-s/color-yellow" title="Ong vàng">Printed...</a>
+                                        </div>
+                                        <div class="product-atributes">
+                                          <a href="5-printed-summer-dress.html#/size-s/color-yellow" title="Product detail">S, Yellow</a>
+                                        </div>
+                                        <span class="price">
+                                          250.000 Đ
+
+
+                                        </span>
+                                      </div>
+                                      <span class="remove_link">
+                                        <a class="ajax_cart_block_remove_link" href="../order62d3.html?delete=1&amp;id_product=5&amp;ipa=19&amp;id_address_delivery=0&amp;token=df3620515d01510675e74506788f04a5" rel="nofollow" title="remove this product from my cart">&nbsp;</a>
+                                      </span>
+                                    </dt>
+                                    <dd data-id="cart_block_combination_of_5_19_0" class="first_item">
+                                      <!-- Customizable datas -->
+                                    </dd>
+                                    <dt data-id="cart_block_product_12_78_0" class="last_item">
+                                      <a class="cart-images" href="12-printed-summer-dress.html" title="Ong vàng">
+                                        <img src="img/product/img7.jpg" width="80" alt="Ong vàng">
+                                      </a>
+                                      <div class="cart-info">
+                                        <div class="product-name">
+                                          <span class="quantity-formated">
+                                            <span class="quantity">1</span>&nbsp;x&nbsp;</span><a class="cart_block_product_name" href="12-printed-summer-dress.html#/size-s/color-yellow" title="Ong vàng">Printed...</a>
+                                        </div>
+                                        <div class="product-atributes">
+                                          <a href="12-printed-summer-dress.html#/size-s/color-yellow" title="Product detail">S, Yellow</a>
+                                        </div>
+                                        <span class="price">
+                                          250.000 Đ
+
+
+                                        </span>
+                                      </div>
+                                      <span class="remove_link">
+                                        <a class="ajax_cart_block_remove_link" href="../order9543.html?delete=1&amp;id_product=12&amp;ipa=78&amp;id_address_delivery=0&amp;token=df3620515d01510675e74506788f04a5" rel="nofollow" title="remove this product from my cart">&nbsp;</a>
+                                      </span>
+                                    </dt>
+                                    <dd data-id="cart_block_combination_of_12_78_0" class="last_item">
+                                      <!-- Customizable datas -->
+                                    </dd>
+                                  </dl>
+                                  <p class="cart_block_no_products unvisible">
+                                    No products
+                                  </p>
+                                  <div class="cart-prices">
+                                    <div class="cart-prices-line first-line">
+                                      <span class="price cart_block_shipping_cost ajax_cart_shipping_cost unvisible">
+                                        To be determined </span>
+                                      <span class="unvisible">
+                                        Shipping
+                                      </span>
+                                    </div>
+                                    <div class="cart-prices-line last-line">
+                                      <span class="price cart_block_total ajax_block_cart_total">250.000 Đ</span>
+                                      <span>Tổng cộng : </span>
+                                    </div>
+                                  </div>
+                                  <p class="cart-buttons">
+                                    <a id="button_order_cart" class="btn btn-default button button-small" href="../order.html" title="Check out" rel="nofollow">
+                                      <span>
+                                        Đặt hàng<i class="icon-chevron-right right"></i>
+                                      </span>
+                                    </a>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- .cart_block -->
+                          </div>
+                        </div>
+
+                        <div id="layer_cart">
+                          <div class="clearfix">
+                            <div class="layer_cart_product col-xs-12 col-md-6">
+                              <span class="cross" title="Close window"></span>
+                              <h2>
+                                <i class="icon-check"></i>Product successfully added to your shopping cart
+                              </h2>
+                              <div class="product-image-container layer_cart_img">
+                              </div>
+                              <div class="layer_cart_product_info">
+                                <span id="layer_cart_product_title" class="product-name"></span>
+                                <span id="layer_cart_product_attributes"></span>
+                                <div>
+                                  <strong class="dark">Quantity</strong>
+                                  <span id="layer_cart_product_quantity"></span>
+                                </div>
+                                <div>
+                                  <strong class="dark">Total</strong>
+                                  <span id="layer_cart_product_price"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="layer_cart_cart col-xs-12 col-md-6">
+                              <h2>
+                                <!-- Plural Case [both cases are needed because page may be updated in Javascript] -->
+                                <span class="ajax_cart_product_txt_s  unvisible">
+                                  There are
+                                  <span class="ajax_cart_quantity">0</span> items in your cart.
+                                </span>
+                                <!-- Singular Case [both cases are needed because page may be updated in Javascript] -->
+                                <span class="ajax_cart_product_txt ">
+                                  There is 1 item in your cart.
+                                </span>
+                              </h2>
+
+                              <div class="layer_cart_row">
+                                <strong class="dark">
+                                  Total products (tax incl.)
+                                </strong>
+                                <span class="ajax_block_products_total">
+                                </span>
+                              </div>
+
+                              <div class="layer_cart_row">
+                                <strong class="dark unvisible">
+                                  Total shipping&nbsp;(tax incl.) </strong>
+                                <span class="ajax_cart_shipping_cost unvisible">
+                                  To be determined </span>
+                              </div>
+                              <div class="layer_cart_row">
+                                <strong class="dark">
+                                  Total (tax incl.)
+                                </strong>
+                                <span class="ajax_block_cart_total">
+                                </span>
+                              </div>
+                              <div class="button-container">
+                                <span class="continue btn btn-default button exclusive-medium" title="Continue shopping">
+                                  <span>
+                                    <i class="icon-chevron-left left"></i>Continue shopping
+                                  </span>
+                                </span>
+                                <a class="btn btn-default button button-medium" href="order.html" title="Proceed to checkout" rel="nofollow">
+                                  <span>
+                                    Proceed to checkout<i class="icon-chevron-right right"></i>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="crossseling"></div>
+                        </div>
+                        <!-- #layer_cart -->
+                        <div class="layer_cart_overlay"></div>
+
+                        <!-- /MODULE Block cart -->
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- /Block search module TOP -->
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="posmegamenu col-xs-12 col-md-12 col-sm-12">
+                <!-- Block categories module -->
+                <div class="ma-nav-mobile-container  visible-xs visible-sm ">
+                  <div class="navbar">
+                    <div id="navbar-inner" class="navbar-inner navbar-inactive">
+                      <a class="btn btn-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </a>
+                      <span class="brand">Category</span>
+                      <ul id="ma-mobilemenu" class="tree dhtml  mobilemenu nav-collapse collapse">
+
+                        <li>
+                          <a href="12-kids-beds.html" title="">
+		Trang chủ
+	</a>
+                          <ul>
+
+                            <li>
+                              <a href="13-dresses.html" title="">
+		Dresses
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="17-cocktail.html" title="">
+		Cocktail
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="18-day.html" title="">
+		Day
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="19-evening.html" title="">
+		Evening
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="20-sports.html" title="">
+		Sports
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="14-clothing.html" title="">
+		Clothing
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="21-t-shirts.html" title="">
+		T-shirts
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="22-coats.html" title="">
+		coats
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="23-jackets-.html" title="">
+		Jackets
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="24-jeans.html" title="">
+		jeans
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="15-handbags.html" title="">
+		Handbags
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="25-blazers.html" title="">
+		Blazers
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="26-table.html" title="">
+		table
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="27-coats.html" title="">
+		coats
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="28-kids.html" title="">
+		kids
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li class="last">
+                              <a href="16-shoes.html" title="">
+		shoes
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="29-sports.html" title="">
+		Sports
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="30-run.html" title="">
+		run
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="31-sandals.html" title="">
+		sandals
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="32-books.html" title="">
+		Books
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+                          </ul>
+                        </li>
+
+
+                        <li>
+                          <a href="33-dressers.html" title="">
+		Dressers
+	</a>
+                          <ul>
+
+                            <li>
+                              <a href="34-bags.html" title="">
+		Bags
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="38-bootees-bags.html" title="">
+		Bootees  Bags
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="39-blazers.html" title="">
+		Blazers
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="35-clothing.html" title="">
+		Clothing
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="40-coats.html" title="">
+		coats
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="41-t-shirts.html" title="">
+		T-shirts
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="36-lingerie.html" title="">
+		Lingerie
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="42-bands.html" title="">
+		Bands
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="43-furniture.html" title="">
+		Furniture
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li class="last">
+                              <a href="37-handbag.html" title="">
+		Handbag
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="44-bands.html" title="">
+		Bands
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="45-lifestyle.html" title="">
+		Lifestyle
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+                          </ul>
+                        </li>
+
+
+                        <li>
+                          <a href="46-desks.html" title="">
+		Desks
+	</a>
+                          <ul>
+
+                            <li>
+                              <a href="47-footwear-man.html" title="">
+		Footwear Man
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="51-gold-ring.html" title="">
+		Gold Ring
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="52-platinum-rings.html" title="">
+		Platinum Rings
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="53-silver-ring.html" title="">
+		Silver Ring
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="54-tungsten-ring.html" title="">
+		Tungsten Ring
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="48-footwear-womens.html" title="">
+		Footwear Womens
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="55-bands-gold.html" title="">
+		Bands Gold
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="56-platinum-bands.html" title="">
+		Platinum Bands
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="57-silver-bands.html" title="">
+		Silver Bands
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="58-tungsten-bands.html" title="">
+		Tungsten Bands
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="49-rings.html" title="">
+		Rings
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="59-platinum-bracelets.html" title="">
+		Platinum Bracelets
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="60-gold-ring.html" title="">
+		Gold Ring
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="61-silver-ring.html" title="">
+		Silver Ring
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="62-diamond-bracelets.html" title="">
+		Diamond Bracelets
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li class="last">
+                              <a href="50-bands.html" title="">
+		Bands
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="63-platinum-necklaces-.html" title="">
+		Platinum Necklaces
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="64-gold-ring.html" title="">
+		Gold Ring
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="65-silver-ring.html" title="">
+		Silver Ring
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="66-sunglasses.html" title="">
+		Sunglasses
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+                          </ul>
+                        </li>
+
+
+                        <li>
+                          <a href="67-bookshelves.html" title="">
+		Bookshelves
+	</a>
+                          <ul>
+
+                            <li>
+                              <a href="68-rings.html" title="">
+		Rings
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="72-coats-jackets.html" title="">
+		Coats &amp; Jackets
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="73-blazers.html" title="">
+		Blazers
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="74-jackets.html" title="">
+		Jackets
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="75-raincoats.html" title="">
+		Raincoats
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="69-dresses.html" title="">
+		Dresses
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="76-ankle-boots.html" title="">
+		Ankle Boots
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="77-footwear-.html" title="">
+		Footwear
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="78-clog-sandals.html" title="">
+		Clog sandals
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="79-combat-boots.html" title="">
+		Combat Boots
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li>
+                              <a href="70-accessories.html" title="">
+		Accessories
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="80-bootees-bags.html" title="">
+		Bootees Bags
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="81-blazers.html" title="">
+		Blazers
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="82-jackets.html" title="">
+		Jackets
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="83-shoes.html" title="">
+		Shoes
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li class="last">
+                              <a href="71-top.html" title="">
+		Top
+	</a>
+                              <ul>
+
+                                <li>
+                                  <a href="84-briefs.html" title="">
+		Briefs
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="85-camis.html" title="">
+		Camis
+	</a>
+                                </li>
+
+
+                                <li>
+                                  <a href="86-nightwear.html" title="">
+		Nightwear
+	</a>
+                                </li>
+
+
+                                <li class="last">
+                                  <a href="87-shapewear.html" title="">
+		Shapewear
+	</a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+                          </ul>
+                        </li>
+
+
+                        <li>
+                          <a href="88-armoires.html" title="">
+		Armoires
+	</a>
+                        </li>
+
+
+                        <li>
+                          <a href="89-kids-chairs-seating.html" title="">
+		Kids Chairs  Seating
+	</a>
+                        </li>
+
+
+                        <li>
+                          <a href="90-bedside-tables.html" title="">
+		Bedside Tables
+	</a>
+                        </li>
+
+
+                        <li>
+                          <a href="91-nursery-glider-chairs.html" title="">
+		Nursery Glider Chairs
+	</a>
+                        </li>
+
+
+                        <li class="last">
+                          <a href="92-cradles-bassinets.html" title="">
+		Cradles Bassinets
+	</a>
+                        </li>
+
+                      </ul>
+                      <script type="text/javascript">
+                        // <![CDATA[
+                        // we hide the tree only if JavaScript is activated
+                        $('div#categories_block_left ul.dhtml').hide();
+                        // ]]>
+                      </script>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Block categories module -->
+
+                <div class="nav-container visible-lg visible-md ">
+                  <div id="pt_custommenu" class="pt_custommenu">
+                    <div id="pt_menu_home" class="pt_menu act">
+                      <div class="parentMenu">
+                        <a href="http://demo.posthemes.com/pos_beestore/layout2/">
+                          <span>Trang chủ</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="pt_menu_cms pt_menu">
+                      <div class="parentMenu">
+                        <a href="content/1-delivery.html">
+                          <span>Cách mua hàng</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="pt_menu_cms pt_menu">
+                      <div class="parentMenu">
+                        <a href="content/1-delivery.html">
+                          <span>Nuôi con</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="pt_menu nav-1">
+                      <div class="parentMenu">
+                        <a href="">
+                          <span>Kinh Nghiệm Tã Vải</span>
+                        </a>
+                      </div>
+                      <div class="popup" style="display: none; width: 300px;">
+                        <div class="block1" style="width: 300px;">
+                          <div class="column first col1">
+                            <div class="itemSubMenu level3">
+                              <div class="itemMenu level4">
+                                <a class="itemMenuName level4" href="">
+                                  <span class="text-nowrap">Phân loại tã vải hiện đại</span>
+                                </a>
+                                <a class="itemMenuName level4" href="">
+                                  <span class="text-nowrap">Cách mặc và thay tã cho bé</span>
+                                </a>
+                                <a class="itemMenuName level4" href="">
+                                  <span class="text-nowrap">Hướng dẫn giặt tã vải đúng cách</span>
+                                </a>
+                                <a class="itemMenuName level4" href="">
+                                  <span class="text-nowrap">Câu hỏi thường gặp về tã vải</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="clearBoth"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="pt_menu_cms pt_menu">
+                      <div class="parentMenu">
+                        <a href="content/4-about-us.html">
+                          <span>Thông tin shop</span>
+                        </a>
+                      </div>
+                    </div>
+
+
+
+
+
+                  </div>
+                </div>
+
+                <script type="text/javascript">
+                  //<![CDATA[
+                  var CUSTOMMENU_POPUP_EFFECT = 0;
+                  var CUSTOMMENU_POPUP_TOP_OFFSET = 60;
+                  //]]>
+                </script>
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </header>
+
+    </div>
+    <div class="columns-container">
+      <div id="columns" class="container">
+        <div id="slider_row" class="row">
+          <div id="top_column" class="center_column col-xs-12 col-sm-12"></div>
+        </div>
+        <div class="row">
+          <div id="left_column" class="column col-xs-12 col-sm-3">
+            <div class="navleft-container visible-lg visible-md ">
+              <div class="pt_vmegamenu_title">
+                <h2><i class="icon-reorder"></i>All categories</h2>
+              </div>
+              <div id="pt_vmegamenu" class="pt_vmegamenu">
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel pt_menu pt_menu_block ">
+                    <div class="parentMenu" role="tab" id="headingOne">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class=" cate-thumb">
+                          <img class="img-cate" src="img/c/33-0_thumb.jpg" alt="" />
+                        </span>
+                        <span>Danh mục</span>
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                        <ul class="des-list">
+                          <li>
+                            <a class="" href="">
+                              <span>Tã ngày size M (3-16Kg)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="">
+                              <span>Tã đêm size M (3-16Kg)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="">
+                              <span>Tã ngày size L (14-22Kg)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="">
+                              <span>Tã đêm size L (14-22Kg)</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel pt_menu pt_menu_block">
+                    <div class="parentMenu" role="tab" id="headingTwo">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span class=" cate-thumb">
+                          <img class="img-cate" src="img/c/46-0_thumb.jpg" alt="" />
+                        </span>
+                        <span>Nuôi dạy bé</span>
+                      </a>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        <ul class="des-list">
+                          <li>
+                            <a class="" href="">
+                              <span>Cẩm nang mẹ & bé</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="">
+                              <span>Làm mẹ</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel pt_menu pt_menu_block">
+                    <div class="parentMenu" role="tab" id="headingThree">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span class=" cate-thumb">
+                          <img class="img-cate" src="img/c/67-0_thumb.jpg" alt="" />
+                        </span>
+                        <span>Hướng dẫn</span>
+                      </a>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        <ul class="des-list">
+                          <li>
+                            <a class="" href="">
+                              <span>Hướng dẫn mua hàng tại anvibaby.com</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <!-- /MODULE Block best sellers -->
+            <div class="free-shipping">
+
+              <div class="banner-box ">
+                <a href="#">
+                  <img src="img/facebook-anvi.PNG" class="img-responsive" alt="" />
+                </a>
+              </div>
+
+              <div class="banner-box ">
+                <a href="#">
+                  <img src="img/banner1.jpg" class="img-responsive" alt="" />
+                </a>
+              </div>
+
+
+              <div class="banner-box ">
+                <a href="#">
+                  <img src="img/banner2.jpg" class="img-responsive" alt="" />
+                </a>
+              </div>
+            </div>
+
+
+
+            <div id="special_products_home" class="products_block ">
+              <div class="special_products_title">
+                <h4>
+                  <a href="prices-drop.html" title="product products">Khuyến mãi</a>
+                </h4>
+              </div>
+              <div class="block_content">
+
+                <div class="row pos-content">
+                  <div id="pos-special-products" class="">
+
+                    <div class="item-special">
+                                        <div class="item-product">
+
+                                            <div class="products-inner">
+                                                <a href="detail.html" title="" class="content_img clearfix">
+                                                    <img src="img/product/img8.jpg" class="img-responsive" alt=""/>
+                                                </a>
+
+                                            </div>
+                                            <div class="product-contents">
+
+                                                <h5 class="product-name">
+                                                    <a href="detail.html" title="">
+                                                        Ong vàng<br/>
+                                                    </a>
+                                                </h5>
+
+                                                <div class="price-box">
+                                                    <span class="price product-price">
+                                                      299.000 </span>
+
+                                                    <span class="old-price product-price">
+                                                      360.000
+                                                    </span>
+
+                                                    <span class="price-percent-reduction">-20%</span>
+
+
+                                                </div>
+                                                <a class="new-box" href="detail.html">
+                                                    <span class="new-label">New</span>
+                                                </a>
+                                                <a class="sale-box" href="detail.html">
+                                                    <span class="sale-label">Sale!</span>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+
+
+                  </div>
+                  <!-- 	<div class="boxprevnext">
+						<a class="prev prevspecial"></a>
+						<a class="next nextspecial"></a>
+					</div> -->
+                </div>
+
+              </div>
+
+            </div>
+
+            <script>
+              $(document).ready(function() {
+
+                var owl = $("#pos-special-products");
+
+                owl.owlCarousel({
+                  autoPlay: false,
+                  pagination: true,
+                  items: 1,
+                  slideSpeed: 1000,
+                  itemsDesktop: [1199, 1],
+                  itemsDesktopSmall: [991, 1],
+                  itemsTablet: [767, 2],
+                  itemsMobile: [480, 1]
+                });
+                // Custom Navigation Events
+                $(".nextspecial").click(function() {
+                  owl.trigger('owl.next');
+                })
+                $(".prevspecial").click(function() {
+                  owl.trigger('owl.prev');
+                })
+              });
+            </script>
+            <!-- MODULE Block best sellers -->
+            <div id="best-sellers_block_right" class="products_block">
+              <h4 class="title_best-sellers">
+                <a href="best-sales.html" title="View a top sellers products">Được mua nhiều nhất</a>
+              </h4>
+              <div class="block_content">
+                <div class=" Topsellers block_content products-block">
+                  <div class="clearfix bestsellerproductslider">
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/2-blouse.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img1.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/2-blouse.html" title="">
+								Blouse
+							</a>
+                        </h5>
+                        <p class="product-description">Short-sleeved blouse with feminine draped sleeve detail.</p>
+                        <div class="price-box">
+                          <span class="price"> 32.000 </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <div class="star_content clearfix">
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <meta itemprop="worstRating" content="0" />
+                              <meta itemprop="ratingValue" content="2" />
+                              <meta itemprop="bestRating" content="5" />
+                            </div>
+                            <span class="nb-comments">1 Review(s)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/3-printed-dress.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/3-printed-dress.html" title="">
+								Printed Dress
+							</a>
+                        </h5>
+                        <p class="product-description">100% cotton double printed dress. Black and white striped top and orange...</p>
+                        <div class="price-box">
+                          <span class="price"> 32.000 </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <div class="star_content clearfix">
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star"></div>
+                              <meta itemprop="worstRating" content="0" />
+                              <meta itemprop="ratingValue" content="2" />
+                              <meta itemprop="bestRating" content="5" />
+                            </div>
+                            <span class="nb-comments">1 Review(s)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/1-faded-short-sleeves-tshirt.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img2.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/1-faded-short-sleeves-tshirt.html" title="">
+								Xanh máy bay
+							</a>
+                        </h5>
+                        <p class="product-description">Xanh máy bay with high neckline. Soft and stretchy...</p>
+                        <div class="price-box">
+                          <span class="price"> 17.000 </span>
+                          <span class="old-price product-price">
+                            198.000
+                          </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <div class="star_content clearfix">
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <meta itemprop="worstRating" content="0" />
+                              <meta itemprop="ratingValue" content="2" />
+                              <meta itemprop="bestRating" content="5" />
+                            </div>
+                            <span class="nb-comments">1 Review(s)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/7-printed-chiffon-dress.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img5.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/7-printed-chiffon-dress.html" title="">
+								Printed Chiffon Dress
+							</a>
+                        </h5>
+                        <p class="product-description">Printed chiffon knee length dress with tank straps. Deep v-neckline.</p>
+                        <div class="price-box">
+                          <span class="price"> 230.000 </span>
+                          <span class="old-price product-price">
+                            26.600
+                          </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <div class="star_content clearfix">
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star"></div>
+                              <meta itemprop="worstRating" content="0" />
+                              <meta itemprop="ratingValue" content="2" />
+                              <meta itemprop="bestRating" content="5" />
+                            </div>
+                            <span class="nb-comments">1 Review(s)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/6-printed-summer-dress.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img6.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/6-printed-summer-dress.html" title="">
+								Ong vàng
+							</a>
+                        </h5>
+                        <p class="product-description">Sleeveless knee-length chiffon dress. V-neckline with elastic under the...</p>
+                        <div class="price-box">
+                          <span class="price"> 36.000 </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating" class="comments_note">
+                            <div class="star_content clearfix">
+                              <div class="star "></div>
+                              <div class="star "></div>
+                              <div class="star "></div>
+                              <div class="star"></div>
+                              <div class="star "></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix bestsellerproductslider">
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/13-printed-chiffon-dress.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img7.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/13-printed-chiffon-dress.html" title="">
+								Printed Chiffon Dress
+							</a>
+                        </h5>
+                        <p class="product-description">Printed chiffon knee length dress with tank straps. Deep v-neckline.</p>
+                        <div class="price-box">
+                          <span class="price"> 230.000 </span>
+                          <span class="old-price product-price">
+                            26.600
+                          </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <div class="star_content clearfix">
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <meta itemprop="worstRating" content="0" />
+                              <meta itemprop="ratingValue" content="2" />
+                              <meta itemprop="bestRating" content="5" />
+                            </div>
+                            <span class="nb-comments">1 Review(s)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/11-printed-dress.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img1.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/11-printed-dress.html" title="">
+								Printed Dress
+							</a>
+                        </h5>
+                        <p class="product-description">Printed evening dress with straight sleeves with black thin waist belt...</p>
+                        <div class="price-box">
+                          <span class="price"> 61.000 </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <div class="star_content clearfix">
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <meta itemprop="worstRating" content="0" />
+                              <meta itemprop="ratingValue" content="2" />
+                              <meta itemprop="bestRating" content="5" />
+                            </div>
+                            <span class="nb-comments">1 Review(s)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-sellers">
+                      <div class="sellers-img">
+                        <a href="kids-beds/5-printed-summer-dress.html" title="" class="products-block-image content_img clearfix">
+                          <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="sellers-content">
+                        <h5>
+                          <a class="product-name" href="kids-beds/5-printed-summer-dress.html" title="">
+								Ong vàng
+							</a>
+                        </h5>
+                        <p class="product-description">Long printed dress with thin adjustable straps. V-neckline and wiring...</p>
+                        <div class="price-box">
+                          <span class="price"> 29.29</span>
+                          <span class="old-price product-price">
+                            360.000
+                          </span>
+
+                        </div>
+                        <div class="ratings hidden">
+                          <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <div class="star_content clearfix">
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <div class="star star_on"></div>
+                              <meta itemprop="worstRating" content="0" />
+                              <meta itemprop="ratingValue" content="2" />
+                              <meta itemprop="bestRating" content="5" />
+                            </div>
+                            <span class="nb-comments">1 Review(s)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="lnk">
+        	<a href="http://demo.posthemes.com/pos_beestore/layout2/en/best-sales" title="All best sellers"  class="btn btn-default button button-small"><span>All best sellers<i class="icon-chevron-right right"></i></span></a>
+        </div> -->
+              </div>
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function() {
+                var owl = $(".Topsellers");
+                owl.owlCarousel({
+                  items: 1,
+                  slideSpeed: 1000,
+                  pagination: false,
+                  itemsDesktop: [1200, 1],
+                  itemsDesktopSmall: [1024, 1],
+                  itemsTablet: [768, 1],
+                  itemsMobile: [480, 1]
+                });
+                $(".nextsellers").click(function() {
+                  owl.trigger('owl.next');
+                })
+                $(".prevsellers").click(function() {
+                  owl.trigger('owl.prev');
+                })
+              });
+            </script>
+
+
+          </div>
+          <div id="center_column" class="center_column col-xs-12 col-sm-9">
+            <div class="pos_center_column">
+              <div class=" pos_bannerslide">
+                <div class="pos_slideshow">
+                  <div class="pos-slideshow">
+                    <div class="flexslider ma-nivoslider">
+                      <div class="pos-loading"></div>
+
+                      <div id="pos-slideshow-home" class="slides">
+
+
+                        <a href="#">
+                          <img style="display:none" src="img/blockslideshow/3.jpg" data-thumb="http://demo.posthemes.com/pos_beestore/layout2/img/blockslideshow/3.jpg" alt="" title="#htmlcaption3" />
+                        </a>
+                        <a href="#">
+                          <img style="display:none" src="img/blockslideshow/4.jpg" data-thumb="http://demo.posthemes.com/pos_beestore/layout2/img/blockslideshow/4.jpg" alt="" title="#htmlcaption4" />
+                        </a>
+                      </div>
+                      <div id="htmlcaption3" class="pos-slideshow-caption nivo-html-caption nivo-caption">
+                        <div class="timethai" style="
+								position:absolute;
+								z-index:99;
+								top:0;
+								left:0;
+								background-color: rgba(49, 56, 72, 0.298);
+								height:5px;
+								-webkit-animation: myfirst 6000ms ease-in-out;
+								-moz-animation: myfirst 6000ms ease-in-out;
+								-ms-animation: myfirst 6000ms ease-in-out;
+								animation: myfirst 6000ms ease-in-out;
+
+							">
+                        </div>
+
+                        <div class="pos-slideshow-content ">
+                          <div class="container">
+                            <div class="pos-slideshow-title">
+                              <h3>Thời trang trẻ em Việt Nam</h3>
+                            </div>
+                            <div class="pos_description">
+                              <h2 class="title2">Nét đẹp tuổi thơ</h2>
+                              <h3 class="title3">Miễn phí 100% phí vận chuyển</h3>
+                            </div>
+
+                            <div class="pos-slideshow-readmore">
+                              <a href="#">Mua ngay</a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div id="htmlcaption4" class="pos-slideshow-caption nivo-html-caption nivo-caption">
+                        <div class="timethai" style="
+								position:absolute;
+								z-index:99;
+								top:0;
+								left:0;
+								background-color: rgba(49, 56, 72, 0.298);
+								height:5px;
+								-webkit-animation: myfirst 6000ms ease-in-out;
+								-moz-animation: myfirst 6000ms ease-in-out;
+								-ms-animation: myfirst 6000ms ease-in-out;
+								animation: myfirst 6000ms ease-in-out;
+
+							">
+                        </div>
+
+                        <div class="pos-slideshow-content ">
+                          <div class="container">
+                            <div class="pos-slideshow-title">
+                              <h3>Thời trang trẻ em Việt Nam</h3>
+                            </div>
+                            <div class="pos_description">
+                              <h2 class="title2">Nét đẹp tuổi thơ</h2>
+                              <h3 class="title3">Miễn phí 100% phí vận chuyển</h3>
+                            </div>
+
+                            <div class="pos-slideshow-readmore">
+                              <a href="#">Mua ngay</a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <script type="text/javascript">
+                    $(window).load(function() {
+                      $(document).off('mouseenter').on('mouseenter', '.pos-slideshow', function(e) {
+                        $('.pos-slideshow .timethai').addClass('pos_hover');
+                      });
+
+                      $(document).off('mouseleave').on('mouseleave', '.pos-slideshow', function(e) {
+                        $('.pos-slideshow .timethai').removeClass('pos_hover');
+                      });
+                      $('#pos-slideshow-home').nivoSlider({
+                        effect: 'random',
+                        slices: 15,
+                        boxCols: 8,
+                        boxRows: 4,
+                        animSpeed: '600',
+                        pauseTime: '6000',
+                        startSlide: 1,
+                        directionNav: 1,
+                        controlNav: 1,
+                        controlNavThumbs: false,
+                        pauseOnHover: true,
+                        manualAdvance: false,
+                        prevText: '<i class="icon-chevron-left"></i>',
+                        nextText: '<i class="icon-chevron-right"></i>',
+                        afterLoad: function() {
+                          $('.pos-loading').css("display", "none");
+                        },
+                        beforeChange: function() {
+                          $('.bannerSlideshow1').removeClass("pos_in");
+                          $('.bannerSlideshow2').removeClass("pos_in");
+                          $('.bannerSlideshow3').removeClass("pos_in");
+                        },
+                        afterChange: function() {
+                          $('.bannerSlideshow1').addClass("pos_in");
+                          $('.bannerSlideshow2').addClass("pos_in");
+                          $('.bannerSlideshow3').addClass("pos_in");
+                        }
+                      });
+                    });
+                  </script>
+
+                </div>
+              </div>
+              <script type="text/javascript">
+                $(document).ready(function() {
+
+                  $(".tab_content").hide();
+                  $(".tab_content:first").show();
+
+                  $("ul.tabs li").click(function() {
+                    $("ul.tabs li").removeClass("active");
+                    $(this).addClass("active");
+                    $(".tab_content").hide();
+                    $(".tab_content").removeClass("animate1 ");
+                    var activeTab = $(this).attr("rel");
+                    $("#" + activeTab).addClass("animate1 ");
+                    $("#" + activeTab).fadeIn();
+                  });
+                });
+              </script>
+              <div class="product-tabs-container-slider">
+                <ul class="tabs">
+                  <li class="first_item item  active " rel="tab_new_product">
+                    Hàng mới
+                  </li>
+                  <li class="last_item item " rel="tab_besseller_product">
+                    Bán chạy nhất
+                  </li>
+
+                </ul>
+
+                <div class="tab_container">
+                  <div id="tab_new_product" class="tab_content">
+                    <div class="row pos-content">
+                      <div class="productTabContent">
+                        <div class="tabslider_item">
+                          <div class="item-product">
+
+                            <div class="products-inner">
+                              <a class="bigpic_13_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Chiffon Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img1.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/13-printed-chiffon-dress.html" title="Printed Chiffon Dress">Printed Chiffon Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  230.000 </span>
+
+                                <span class="old-price product-price">
+                                  26.600
+                                </span>
+
+                                <span class="price-percent-reduction">-5%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/13-printed-chiffon-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_12_tabproduct tabproduct-img product_image" href="detail.html" title="Ong vàng">
+                                <img class="replace-2x img-responsive" src="img/product/img2.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/12-printed-summer-dress.html" title="Ong vàng">Ong vàng</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  299.000 </span>
+
+                                <span class="old-price product-price">
+                                  360.000
+                                </span>
+
+                                <span class="price-percent-reduction">-20%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/12-printed-summer-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                              <a class="sale-box" href="kids-beds/12-printed-summer-dress.html">
+                                <span class="sale-label">Sale!</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_11_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img1.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/11-printed-dress.html" title="Printed Dress">Printed Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  61.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/11-printed-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_10_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img5.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating" class="comments_note">
+                                  <div class="star_content clearfix">
+                                    <div class="star "></div>
+                                    <div class="star "></div>
+                                    <div class="star "></div>
+                                    <div class="star"></div>
+                                    <div class="star "></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/10-printed-dress.html" title="Printed Dress">Printed Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  32.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/10-printed-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_9_tabproduct tabproduct-img product_image" href="detail.html" title="Blouse">
+                                <img class="replace-2x img-responsive" src="img/product/img4.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/9-blouse.html" title="Blouse">Blouse</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  32.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/9-blouse.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_8_tabproduct tabproduct-img product_image" href="detail.html" title="Xanh máy bay">
+                                <img class="replace-2x img-responsive" src="img/product/img7.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/8-faded-short-sleeves-tshirt.html" title="Xanh máy bay">Xanh máy bay</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  17.000 </span>
+
+                                <span class="old-price product-price">
+                                  198.000
+                                </span>
+
+                                <span class="price-percent-reduction">-10%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/8-faded-short-sleeves-tshirt.html">
+                                <span class="new-label">New</span>
+                              </a>
+                              <a class="sale-box" href="kids-beds/8-faded-short-sleeves-tshirt.html">
+                                <span class="sale-label">Sale!</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_7_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Chiffon Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img6.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/7-printed-chiffon-dress.html" title="Printed Chiffon Dress">Printed Chiffon Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  230.000 </span>
+
+                                <span class="old-price product-price">
+                                  26.600
+                                </span>
+
+                                <span class="price-percent-reduction">-5%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/7-printed-chiffon-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_3_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/3-printed-dress.html" title="Printed Dress">Printed Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  32.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/3-printed-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_4_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img5.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/4-printed-dress.html" title="Printed Dress">Printed Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  61.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/4-printed-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_5_tabproduct tabproduct-img product_image" href="detail.html" title="Ong vàng">
+                                <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/5-printed-summer-dress.html" title="Ong vàng">Ong vàng</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  299.000 </span>
+
+                                <span class="old-price product-price">
+                                  360.000
+                                </span>
+
+                                <span class="price-percent-reduction">-20%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/5-printed-summer-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                              <a class="sale-box" href="kids-beds/5-printed-summer-dress.html">
+                                <span class="sale-label">Sale!</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_6_tabproduct tabproduct-img product_image" href="detail.html" title="Ong vàng">
+                                <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating" class="comments_note">
+                                  <div class="star_content clearfix">
+                                    <div class="star "></div>
+                                    <div class="star "></div>
+                                    <div class="star "></div>
+                                    <div class="star"></div>
+                                    <div class="star "></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/6-printed-summer-dress.html" title="Ong vàng">Ong vàng</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  36.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/6-printed-summer-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_1_tabproduct tabproduct-img product_image" href="detail.html" title="Xanh máy bay">
+                                <img class="replace-2x img-responsive" src="img/product/img2.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/1-faded-short-sleeves-tshirt.html" title="Xanh máy bay">Xanh máy bay</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  17.000 </span>
+
+                                <span class="old-price product-price">
+                                  198.000
+                                </span>
+
+                                <span class="price-percent-reduction">-10%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/1-faded-short-sleeves-tshirt.html">
+                                <span class="new-label">New</span>
+                              </a>
+                              <a class="sale-box" href="kids-beds/1-faded-short-sleeves-tshirt.html">
+                                <span class="sale-label">Sale!</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="boxprevnext">
+                        <a class="prev prevtabslider"></a>
+                        <a class="next nexttabslider"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="tab_besseller_product" class="tab_content">
+                    <div class="row pos-content">
+                      <div class="productTabContent">
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_2_tabproduct tabproduct-img product_image" href="detail.html" title="Blouse">
+                                <img class="replace-2x img-responsive" src="img/product/img1.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/2-blouse.html" title="Blouse">Blouse</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  32.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/2-blouse.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_1_tabproduct tabproduct-img product_image" href="detail.html" title="Xanh máy bay">
+                                <img class="replace-2x img-responsive" src="img/product/img2.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/1-faded-short-sleeves-tshirt.html" title="Xanh máy bay">Xanh máy bay</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  17.000 </span>
+
+                                <span class="old-price product-price">
+                                  198.000
+                                </span>
+
+                                <span class="price-percent-reduction">-10%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/1-faded-short-sleeves-tshirt.html">
+                                <span class="new-label">New</span>
+                              </a>
+                              <a class="sale-box" href="kids-beds/1-faded-short-sleeves-tshirt.html">
+                                <span class="sale-label">Sale!</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_3_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/3-printed-dress.html" title="Printed Dress">Printed Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  32.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/3-printed-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_6_tabproduct tabproduct-img product_image" href="detail.html" title="Ong vàng">
+                                <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating" class="comments_note">
+                                  <div class="star_content clearfix">
+                                    <div class="star "></div>
+                                    <div class="star "></div>
+                                    <div class="star "></div>
+                                    <div class="star"></div>
+                                    <div class="star "></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/6-printed-summer-dress.html" title="Ong vàng">Ong vàng</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  36.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/6-printed-summer-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_7_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Chiffon Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img6.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/7-printed-chiffon-dress.html" title="Printed Chiffon Dress">Printed Chiffon Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  230.000 </span>
+
+                                <span class="old-price product-price">
+                                  26.600
+                                </span>
+
+                                <span class="price-percent-reduction">-5%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/7-printed-chiffon-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_11_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img1.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/11-printed-dress.html" title="Printed Dress">Printed Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  61.000 </span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/11-printed-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tabslider_item">
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_5_tabproduct tabproduct-img product_image" href="detail.html" title="Ong vàng">
+                                <img class="replace-2x img-responsive" src="img/product/img3.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/5-printed-summer-dress.html" title="Ong vàng">Ong vàng</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  299.000 </span>
+
+                                <span class="old-price product-price">
+                                  360.000
+                                </span>
+
+                                <span class="price-percent-reduction">-20%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/5-printed-summer-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                              <a class="sale-box" href="kids-beds/5-printed-summer-dress.html">
+                                <span class="sale-label">Sale!</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="item-product">
+                            <div class="products-inner">
+                              <a class="bigpic_13_tabproduct tabproduct-img product_image" href="detail.html" title="Printed Chiffon Dress">
+                                <img class="replace-2x img-responsive" src="img/product/img1.jpg" alt="" />
+
+                              </a>
+
+                            </div>
+                            <div class="product-contents">
+                              <div class="ratings hidden">
+                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                  <div class="star_content clearfix">
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <div class="star star_on"></div>
+                                    <meta itemprop="worstRating" content="0" />
+                                    <meta itemprop="ratingValue" content="2" />
+                                    <meta itemprop="bestRating" content="5" />
+                                  </div>
+                                  <span class="nb-comments">1 Review(s)</span>
+                                </div>
+                              </div>
+                              <h5 class="product-name"><a class="product-name" href="kids-beds/13-printed-chiffon-dress.html" title="Printed Chiffon Dress">Printed Chiffon Dress</a></h5>
+                              <div class="price-box">
+                                <span class="price product-price">
+                                  230.000 </span>
+
+                                <span class="old-price product-price">
+                                  26.600
+                                </span>
+
+                                <span class="price-percent-reduction">-5%</span>
+
+
+
+                              </div>
+                              <a class="new-box" href="kids-beds/13-printed-chiffon-dress.html">
+                                <span class="new-label">New</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="boxprevnext">
+                        <a class="prev prevtabslider"></a>
+                        <a class="next nexttabslider"></a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- .tab_container -->
+              </div>
+              <script type="text/javascript">
+                $(document).ready(function() {
+                  var owl = $(".productTabContent");
+                  owl.owlCarousel({
+                    items: 4,
+                    slideSpeed: 1000,
+                    pagination: false,
+                    itemsDesktop: [1199, 3],
+                    itemsDesktopSmall: [991, 2],
+                    itemsTablet: [767, 2],
+                    itemsMobile: [480, 1]
+                  });
+                  $(".nexttabslider").click(function() {
+                    owl.trigger('owl.next');
+                  })
+                  $(".prevtabslider").click(function() {
+                    owl.trigger('owl.prev');
+                  })
+                });
+              </script>
+
+              <script type="text/javascript">
+                $(document).ready(function() {
+                  var owl = $(".featureSlide");
+                  owl.owlCarousel({
+                    items: 4,
+                    slideSpeed: 1000,
+                    pagination: false,
+                    itemsDesktop: [1199, 3],
+                    itemsDesktopSmall: [991, 2],
+                    itemsTablet: [767, 2],
+                    itemsMobile: [480, 1],
+                    autoPlay: false,
+                  });
+
+                  // Custom Navigation Events
+                  $(".nextfure").click(function() {
+                    owl.trigger('owl.next');
+                  })
+                  $(".prevfure").click(function() {
+                    owl.trigger('owl.prev');
+                  })
+                });
+              </script>
+
+              <!-- 	<script type="text/javascript">
+		  $('.pos-feature-product .bxslider').bxSlider({
+            auto: 0,
+            slideWidth:270,
+			slideMargin: 30,
+			minSlides: 4,
+			maxSlides: 12,
+			speed:  1000,
+			pause: 600,
+			controls: 1,
+            pager: false,
+		});
+	</script> -->
+
+
+
+              <div class="background-position">
+                <div class="block-smartblog">
+                  <div class="blog-title">
+                    <h2>
+                      <a href="smartblog.html">
+                        <span>Các mẹ hãy chăm sóc con kiến thức và kinh nghiệm !</span>
+                      </a>
+                    </h2>
+                  </div>
+                  <div class="row pos-content">
+                    <div class="sdsblog-box-content">
+                      <div>
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Christmas Sale is here 5" class="feat_img_small" src="img/tin1.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">Làm thế nào để thay tả cho bé</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>Đặt trực tiếp tã mới dưới tã cũ. Kéo cho phần trên của tã mới lên, đến khi cao gần bằng rốn của bé.
+                            </p>
+
+                          </div>
+                        </div>
+
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Share the Love for PrestaShop 1.6" class="feat_img_small" src="img/tin2.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">Tã vải - Những câu hỏi thường gặp</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Kéo cho phần trên của tã mới lên, đến khi cao gần bằng rốn của bé.
+                            </p>
+
+                          </div>
+                        </div>
+
+
+
+                      </div>
+
+                      <div>
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Share the Love for PrestaShop 1.6" class="feat_img_small" src="img/tin2.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">Tã vải - Những câu hỏi thường gặp</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Kéo cho phần trên của tã mới lên, đến khi cao gần bằng rốn của bé.
+                            </p>
+
+                          </div>
+                        </div>
+
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin3.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">Cấu tạo tã vải Anvi Baby</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Một tã Anvi Baby gồm 1 vỏ tã và 1 miếng lót. Miếng lót được đưa vào bên trong vỏ tã qua khe nhét lót được thiết kế ở vỏ
+                            </p>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin3.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">Cấu tạo tã vải Anvi Baby</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Một tã Anvi Baby gồm 1 vỏ tã và 1 miếng lót. Miếng lót được đưa vào bên trong vỏ tã qua khe nhét lót được thiết kế ở vỏ
+                            </p>
+
+                          </div>
+                        </div>
+
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin4.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">Các bước sử dụng tã vải Anvibaby</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Cũng như quần áo mới của bé, các mẹ nên giặt tã trước khi sử dụng nhằm làm sạch lớp màng bụi bám trên tã vải và miếng lót quá trình sản xuất.
+                            </p>
+
+                          </div>
+                        </div>
+
+
+
+                      </div>
+
+                      <div>
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin4.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">Các bước sử dụng tã vải Anvibaby</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Cũng như quần áo mới của bé, các mẹ nên giặt tã trước khi sử dụng nhằm làm sạch lớp màng bụi bám trên tã vải và miếng lót quá trình sản xuất.
+                            </p>
+
+                          </div>
+                        </div>
+
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin1.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">3 BÍ QUYẾT DẠY BÉ TẬP NÓI VỚI 3 TRÒ CHƠI RẤT ĐƠN GIẢN VỚI CÁC BÉ Ở ĐỘ TUỔI TẬP ĐI.</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Với các bé ở độ tuổi tập đi, nói chuyện không chỉ là một trò vui mà còn giúp bé...
+                            </p>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin1.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">3 BÍ QUYẾT DẠY BÉ TẬP NÓI VỚI 3 TRÒ CHƠI RẤT ĐƠN GIẢN VỚI CÁC BÉ Ở ĐỘ TUỔI TẬP ĐI.</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Với các bé ở độ tuổi tập đi, nói chuyện không chỉ là một trò vui mà còn giúp bé...
+                            </p>
+
+                          </div>
+                        </div>
+
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin2.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">5 loại bệnh thường gặp ở bé trong mùa thu cần phòng tránh.</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Mùa thu tuy không lạnh như mùa đông và nóng như mùa hè nhưng thời tiết có sự thay đổi thất thường giữa ngày và đêm nên rất dễ hình thành các loại bệnh ở trẻ
+                            </p>
+
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      <div>
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin2.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">5 loại bệnh thường gặp ở bé trong mùa thu cần phòng tránh.</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Mùa thu tuy không lạnh như mùa đông và nóng như mùa hè nhưng thời tiết có sự thay đổi thất thường giữa ngày và đêm nên rất dễ hình thành các loại bệnh ở trẻ
+                            </p>
+
+                          </div>
+                        </div>
+
+                        <div class="sds_blog_post">
+                          <div class="news_module_image_holder">
+                            <a href="">
+                              <img alt="Answers to your Questions about PrestaShop 1.6" class="feat_img_small" src="img/tin1.jpg">
+                            </a>
+                          </div>
+                          <div class="blog_content">
+                            <h2 class="sds_post_title"><a href="">3 BÍ QUYẾT DẠY BÉ TẬP NÓI VỚI 3 TRÒ CHƠI RẤT ĐƠN GIẢN VỚI CÁC BÉ Ở ĐỘ TUỔI TẬP ĐI.</a></h2>
+                            <span class="date-smart">2015-10-03 14:44:01</span>
+                            <a href="" class="r_more">Xem thêm</a>
+                            <p>
+                              Với các bé ở độ tuổi tập đi, nói chuyện không chỉ là một trò vui mà còn giúp bé...
+                            </p>
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!-- <div class="boxprevnext">
+			<a class="prev prevblog"></a>
+			<a class="next nextblog"></a>
+		</div>	 -->
+                  </div>
+                </div>
+
+                <script>
+                  $(document).ready(function() {
+
+                    var owl = $(".sdsblog-box-content");
+
+                    owl.owlCarousel({
+                      autoPlay: false,
+                      pagination: true,
+                      items: 3,
+                      slideSpeed: 1000,
+                      itemsDesktop: [1199, 3],
+                      itemsDesktopSmall: [991, 3],
+                      itemsTablet: [767, 2],
+                      itemsMobile: [480, 1]
+                    });
+                    // Custom Navigation Events
+                    $(".nextblog").click(function() {
+                      owl.trigger('owl.next');
+                    })
+                    $(".prevblog").click(function() {
+                      owl.trigger('owl.prev');
+                    })
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <!-- #center_column -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- #columns -->
+    </div>
+    <!-- .columns-container -->
+    <!-- Footer -->
+    <div class="footer-container">
+      <footer id="footer">
+        <div class="footer-static-top">
+
+        </div>
+        <div class="footer-static-middle">
+
+          <div class="container">
+            <div class="background-position">
+              <div class="row">
+                <div class="col-xs-12 col-md-12 col-sm-12">
+                  <div class="pos-logo-container">
+
+                    <div class="container-inner">
+                      <div class="pos-logo">
+                        <div class="pos-logo-title">
+                          <h2>
+                            <span>Our Brands</span>
+                          </h2>
+                        </div>
+                        <div class="row pos-content">
+                          <div class="logo-slider">
+                            <div class="item-banklogo">
+                              <a href="http://posthemes.com/">
+                                <img class="replace-2x img-responsive" src="img/blocklogo/brand-1.png" alt="Logo" />
+                              </a>
+                            </div>
+                            <div class="item-banklogo">
+                              <a href="http://posthemes.com/">
+                                <img class="replace-2x img-responsive" src="img/blocklogo/brand-2.png" alt="Logo" />
+                              </a>
+                            </div>
+                            <div class="item-banklogo">
+                              <a href="http://posthemes.com/">
+                                <img class="replace-2x img-responsive" src="img/blocklogo/brand-3.png" alt="Logo" />
+                              </a>
+                            </div>
+                            <div class="item-banklogo">
+                              <a href="http://posthemes.com/">
+                                <img class="replace-2x img-responsive" src="img/blocklogo/brand-4.png" alt="Logo" />
+                              </a>
+                            </div>
+                            <div class="item-banklogo">
+                              <a href="http://posthemes.com/">
+                                <img class="replace-2x img-responsive" src="img/blocklogo/brand-5.png" alt="Logo" />
+                              </a>
+                            </div>
+                            <div class="item-banklogo">
+                              <a href="http://posthemes.com/">
+                                <img class="replace-2x img-responsive" src="img/blocklogo/brand-6.png" alt="Logo" />
+                              </a>
+                            </div>
+                            <div class="item-banklogo">
+                              <a href="http://posthemes.com/">
+                                <img class="replace-2x img-responsive" src="img/blocklogo/brand-7.png" alt="Logo" />
+                              </a>
+                            </div>
+
+                          </div>
+                          <div class="boxprevnext">
+                            <a class="prev prevlogo"></a>
+                            <a class="next nextlogo"></a>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!-- <script type="text/javascript">
+		  $('.pos-logo .bxslider').bxSlider({
+            auto: 0,
+            slideWidth:180,
+			slideMargin: 5,
+			minSlides: 1,
+			maxSlides: 6,
+			speed:  3000,
+			pause: 600,
+			controls: 1,
+            pager: false,
+		});
+	</script> -->
+                    <script type="text/javascript">
+                      $(document).ready(function() {
+                        var owl = $(".logo-slider");
+                        owl.owlCarousel({
+                          items: 6,
+                          slideSpeed: 1000,
+                          pagination: false,
+                          itemsDesktop: [1199, 5],
+                          itemsDesktopSmall: [911, 4],
+                          itemsTablet: [767, 3],
+                          itemsMobile: [360, 2]
+                        });
+                        $(".nextlogo").click(function() {
+                          owl.trigger('owl.next');
+                        })
+                        $(".prevlogo").click(function() {
+                          owl.trigger('owl.prev');
+                        })
+                      });
+                    </script>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class=" col-sm-6 col-md-4 col-xs-12">
+                  <div class="footer-static">
+                    <div class="footer-block">
+                      <div class="logo-footer">
+                        <a href="#">
+                          <img src="img/logo/anvibaby-logo.jpg" alt="" width="200" />
+                        </a>
+                      </div>
+                      <div class="footer-static-content">
+                        <ul class=" contact_us block_content toggle-footer">
+                          <li class="address add">Địa chỉ:
+                            <span> 373/182 Lý Thường Kiệt -Tân Bình-Tp.HCM</span>
+                          </li>
+                          <li class="phone add">ĐT : 0973.260.062 -0935.258.885</span>
+                          </li>
+                          <li class="email add">Email: <a href="#"> anvibaby@gmail.com</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <section id="social_block">
+                      <ul>
+                        <li class="facebook">
+                          <a class="_blank" href="https://www.facebook.com/">
+                            <span>Facebook</span>
+                            <span class="tooltip">Facebook</span>
+                          </a>
+                        </li>
+                        <li class="twitter">
+                          <a class="_blank" href="https://twitter.com/">
+                            <span>Twitter</span>
+                            <span class="tooltip">Twitter</span>
+                          </a>
+                        </li>
+                        <li class="rss">
+                          <a class="_blank" href="">
+                            <span>RSS</span>
+                            <span class="tooltip">RSS</span>
+                          </a>
+                        </li>
+                        <li class="youtube">
+                          <a class="_blank" href="https://www.youtube.com/user/">
+                            <span>Youtube</span>
+                            <span class="tooltip">Youtube</span>
+                          </a>
+                        </li>
+                        <li class="google-plus">
+                          <a class="_blank" href="">
+                            <span>Google Plus</span>
+                            <span class="tooltip">Google Plus</span>
+                          </a>
+                        </li>
+                      </ul>
+                      <h4>Follow us</h4>
+                    </section>
+
+                    <div class="clearfix"></div>
+
+                  </div>
+
+
+                </div>
+                <div class="footer-static">
+
+                  <!-- MODULE Block footer -->
+                  <section class="footer-block col-xs-12 col-sm-6 col-md-2" id="block_various_links_footer">
+                    <h4>Thông tin</h4>
+                    <ul class="toggle-footer">
+
+                      <li class="item">
+                        <a href="new-products.html" title="New products">
+					Sản phẩm mới
+				</a>
+                      </li>
+                      <li class="item">
+                        <a href="best-sales.html" title="Best sellers">
+						Best sellers
+					</a>
+                      </li>
+                      <li class="item">
+                        <a href="stores.html" title="Our stores">
+						Thông tin cửa hàng
+					</a>
+                      </li>
+                      <li class="item">
+                        <a href="contact-us.html" title="Contact us">
+					Liên hệ
+				</a>
+                      </li>
+                      <li>
+                        <a href="sitemap.html" title="Sitemap">
+					Sitemap
+				</a>
+                      </li>
+                    </ul>
+
+                  </section>
+                  <!-- 		<section class="bottom-footer col-xs-12">
+		<div>
+			&copy; 2015 <a class="_blank" href="http://www.prestashop.com">Ecommerce software by PrestaShop™</a>
+		</div>
+	</section>
+	 -->
+                  <!-- /MODULE Block footer -->
+
+
+                  <!-- Block myaccount module -->
+                  <section class=" my-account footer-block col-xs-12 col-sm-6 col-md-2">
+                    <h4><a href="#" title="Manage my customer account" rel="nofollow">Tài khoản</a></h4>
+                    <div class="block_content toggle-footer">
+                      <ul class="bullet">
+                        <li><a href="#" title="My orders" rel="nofollow">Đơn hàng</a></li>
+                        <li><a href="#" title="Manage my personal information" rel="nofollow">Thông tin tài khoản</a></li>
+
+                      </ul>
+                    </div>
+                  </section>
+                  <!-- /Block myaccount module -->
+
+
+                  <!-- End Map -->
+
+
+                  <div class=" static-footer  footer-block col-sm-6 col-md-4 col-xs-12">
+                    <h4 class="footer-static-title">Bản đồ</h4>
+
+                    <!-- Google Map -->
+                    <script src="http://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+
+                    <!-- Start Map -->
+                    <div id="map" data-position-latitude="10.769698" data-position-longitude="106.671054" data-marker-img="img/marker.png"></div>
+                    <script>
+                      (function($) {
+                        $.fn.CustomMap = function(options) {
+
+                          var posLatitude = $('#map').data('position-latitude'),
+                            posLongitude = $('#map').data('position-longitude');
+
+                          var settings = $.extend({
+                            home: {
+                              latitude: posLatitude,
+                              longitude: posLongitude
+                            },
+                            text: '<div class="map-popup"><h4>Anvi Baby Shop</h4><p>An toàn cho bé - Tiết kiệm cho mẹ</p></div>',
+                            icon_url: $('#map').data('marker-img'),
+                            zoom: 18
+                          }, options);
+
+                          var coords = new google.maps.LatLng(settings.home.latitude, settings.home.longitude);
+
+                          return this.each(function() {
+                            var element = $(this);
+
+                            var options = {
+                              zoom: settings.zoom,
+                              center: coords,
+                              mapTypeId: google.maps.MapTypeId.ROADMAP,
+                              mapTypeControl: false,
+                              scaleControl: false,
+                              streetViewControl: false,
+                              panControl: true,
+                              disableDefaultUI: true,
+                              zoomControlOptions: {
+                                style: google.maps.ZoomControlStyle.DEFAULT
+                              },
+                              overviewMapControl: true,
+                            };
+
+                            var map = new google.maps.Map(element[0], options);
+
+                            var icon = {
+                              url: settings.icon_url,
+                              origin: new google.maps.Point(0, 0)
+                            };
+
+                            var marker = new google.maps.Marker({
+                              position: coords,
+                              map: map,
+                              icon: icon,
+                              draggable: false
+                            });
+
+                            var info = new google.maps.InfoWindow({
+                              content: settings.text
+                            });
+
+                            google.maps.event.addListener(marker, 'click', function() {
+                              info.open(map, marker);
+                            });
+
+                            var styles = [{
+                              "featureType": "landscape",
+                              "stylers": [{
+                                "saturation": -100
+                              }, {
+                                "lightness": 65
+                              }, {
+                                "visibility": "on"
+                              }]
+                            }, {
+                              "featureType": "poi",
+                              "stylers": [{
+                                "saturation": -100
+                              }, {
+                                "lightness": 51
+                              }, {
+                                "visibility": "simplified"
+                              }]
+                            }, {
+                              "featureType": "road.highway",
+                              "stylers": [{
+                                "saturation": -100
+                              }, {
+                                "visibility": "simplified"
+                              }]
+                            }, {
+                              "featureType": "road.arterial",
+                              "stylers": [{
+                                "saturation": -100
+                              }, {
+                                "lightness": 30
+                              }, {
+                                "visibility": "on"
+                              }]
+                            }, {
+                              "featureType": "road.local",
+                              "stylers": [{
+                                "saturation": -100
+                              }, {
+                                "lightness": 40
+                              }, {
+                                "visibility": "on"
+                              }]
+                            }, {
+                              "featureType": "transit",
+                              "stylers": [{
+                                "saturation": -100
+                              }, {
+                                "visibility": "simplified"
+                              }]
+                            }, {
+                              "featureType": "administrative.province",
+                              "stylers": [{
+                                "visibility": "on"
+                              }]
+                            }, {
+                              "featureType": "water",
+                              "elementType": "labels",
+                              "stylers": [{
+                                "visibility": "on"
+                              }, {
+                                "lightness": -25
+                              }, {
+                                "saturation": -100
+                              }]
+                            }, {
+                              "featureType": "water",
+                              "elementType": "geometry",
+                              "stylers": [{
+                                "hue": "#ffff00"
+                              }, {
+                                "lightness": -25
+                              }, {
+                                "saturation": -97
+                              }]
+                            }];
+
+                            map.setOptions({
+                              styles: styles
+                            });
+                          });
+
+                        };
+                      }(jQuery));
+
+                      jQuery(document).ready(function() {
+                        jQuery('#map').CustomMap();
+                      });
+                    </script>
+                    <!-- End Google Map -->
+
+                  </div>
+
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-static-bottom">
+          <div class="container">
+            <div class="background-position">
+              <div class="row">
+                <div class="footer-static">
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <address>Copyright <i class="icon-copyright"></i> <a href="">Vinass</a>. All Rights Reserved</address>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-8">
+                    <ul class="payment">
+                      <li>
+                        <a href="#">
+                          <img src="img/cms/payment.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+
+                <div class="back-top">
+                  <a href="#" class="mypresta_scrollup hidden-phone"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- #footer -->
+  </div>
+  <!-- #page -->
+
+  <script>
+    $(document).ready(function() {
+      $(function() {
+        $("[data-toggle='tooltip']").tooltip();
+        $(".cart_block_top").sticky({
+          topSpacing: 0
+        });
+        $(".posmegamenu").sticky({
+          topSpacing: 0
+        });
+      });
+    });
+  </script>
+</body>
+<!-- Mirrored from demo.posthemes.com/pos_beestore/layout2/en/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Nov 2015 05:28:27 GMT -->
+
+</html>

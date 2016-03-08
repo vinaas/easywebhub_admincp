@@ -1,0 +1,66 @@
+
+<div id="center_column" class="center_column col-xs-12 col-sm-9">
+  <div class="pos_center_column danh-muc-list">
+
+    <div class="blog-title">
+         <h2>
+             <a href="#">
+                 <span><%= @document.title %></span>
+             </a>
+         </h2>
+     </div>
+
+     <ul class="product_list grid row">
+        <% for product in @getCollection('products').toJSON(): %>
+
+          <% for gia1 in product.sizes: %>
+            <% if gia1.id == @getProductIdName() : %>
+          <li class="item-product col-xs-12 col-sm-6 col-md-3">
+            <div class="products-inner">
+              <a class="tabproduct-img product_image" href="<%= product.url %>#<%= @getProductIdName() %>" title="<%= product.title %>">
+                <img class="replace-2x img-responsive" src="<%= product.images[0].thickbox %>" alt="" />
+              </a>
+
+            </div>
+            <div class="product-contents">
+
+              <h5 class="product-name">
+                <a class="product-name" href="<%= product.url %>#<%= @getProductIdName() %>" title="<%= product.title %>">
+                  <%= product.title %>
+                </a>
+              </h5>
+              <div class="price-box">
+
+
+                    <span class="price product-price">
+
+                      <%= gia1.price %>
+                    </span>
+                    <% if gia1.old_price > gia1.price: %>
+                    <span class="old-price product-price">
+                      <%= gia1.old_price %>
+                    </span>
+                    <% end %>
+
+
+
+              </div>
+
+              <a class="new-box" href="<%= product.url %>#<%= @getProductIdName() %>">
+                <span class="new-label">Mới</span>
+              </a>
+
+              <!-- <a class="sale-box" href="<%= product.url %>">
+                <span class="sale-label">Sale!</span>
+              </a> -->
+
+            </div>
+          </li>
+          <% end %>
+        <% end %>
+
+            <% end %>
+          </ul>
+
+  </div>
+</div>

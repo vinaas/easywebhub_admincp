@@ -1,0 +1,139 @@
+---
+layout: container
+---
+
+<div id="columns" class="container">
+        <div id="slider_row" class="row">
+          <div id="top_column" class="center_column col-xs-12 col-sm-12"></div>
+        </div>
+        <div class="row">
+
+          <%- @partial('sidebar') %>
+
+          <div id="center_column" class="center_column col-xs-12 col-sm-9">
+                    <div class="pos_center_column">
+
+                        <div class="background-position baiviet">
+                          <div class="page-item-title">
+                            <h1 class="post-title"><%= @document.title %></h1>
+
+                            <div class="clearfix">
+                              <div class="post-info pull-left">
+                                  <span><i class="fa fa-calendar"></i> Ngày đăng: <%= @time(@document.ngaydang, 'DD') %>/<%= @time(@document.ngaydang, 'MM') %>/<%= @time(@document.ngaydang, 'YYYY') %></span>
+                              </div>
+
+                                <div id="fb-root"></div>
+                                <script>(function(d, s, id) {
+                                  var js, fjs = d.getElementsByTagName(s)[0];
+                                  if (d.getElementById(id)) return;
+                                  js = d.createElement(s); js.id = id;
+                                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                                  fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>
+
+                                <div class="pull-left">
+                                  <div class="fb-like" data-href="<%- @site.url %><%- @document.url %>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                                </div>
+
+                            </div>
+
+
+
+                          </div>
+                          <hr>
+
+                        <%- @content %>
+                    </div>
+                    <br>
+                    <br>
+                      <% if  @getCollection("html").findAllLive({mucTintuc: @document.mucTintuc, title: {$ne: @document.title}}).length isnt 0:  %>
+
+
+                    <div class="background-position">
+                      <div class="block-smartblog">
+                        <div class="blog-title">
+                          <h2>
+                            <a href="smartblog.html">
+                              <span>Bài viết cùng chuyên mục :</span>
+                            </a>
+                          </h2>
+                        </div>
+                        <div class="row pos-content">
+                          <div class="sdsblog-box-content2 owl-carousel">
+                            <% for tintuc2 in @getCollection("html").findAllLive({mucTintuc: @document.mucTintuc, title: {$ne: @document.title}}).toJSON(): %>
+
+                            <div>
+
+                              <div class="sds_blog_post">
+                                <div class="news_module_image_holder">
+                                  <a href="<%= tintuc2.url %>">
+                                    <img alt="<%= tintuc2.title %>" class="feat_img_small" src="/<%= tintuc2.thumbnail %>">
+                                  </a>
+                                </div>
+                                <div class="blog_content">
+                                  <h2 class="sds_post_title"><a href="<%= tintuc2.url %>"><%= tintuc2.title %></a></h2>
+                                  <span class="date-smart">Ngày <%= @time(tintuc2.ngaydang, 'DD') %>/<%= @time(tintuc2.ngaydang, 'MM') %>/<%= @time(tintuc2.ngaydang, 'YYYY') %></span>
+                                  <a href="<%= tintuc2.url %>" class="r_more">Xem thêm</a>
+                                  <p>
+                                    <%= tintuc2.sDescription %>
+                                  </p>
+
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <% end %>
+
+
+                          </div>
+
+                            <div class="boxprevnext">
+                              <a class="prev nextblog2"></a>
+                              <a class="next prevblog2"></a>
+                            </div>
+
+                        </div>
+                      </div>
+
+                      <script>
+                        $(document).ready(function() {
+
+                          var owl = $(".sdsblog-box-content2");
+
+                          owl.owlCarousel({
+                            autoPlay: false,
+                            pagination: false,
+                            items: 3,
+                            slideSpeed: 1000,
+                            itemsDesktop: [1199, 3],
+                            itemsDesktopSmall: [991, 3],
+                            itemsTablet: [767, 2],
+                            itemsMobile: [480, 1]
+                          });
+                          // Custom Navigation Events
+                          $(".nextblog2").click(function() {
+                            owl.trigger('owl.next');
+                          })
+                          $(".prevblog2").click(function() {
+                            owl.trigger('owl.prev');
+                          })
+                        });
+                      </script>
+                    </div>
+
+                      <% end %>
+
+
+
+                  </div>
+                  </div>
+
+
+
+
+
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- #columns -->

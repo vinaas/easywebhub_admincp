@@ -1,0 +1,538 @@
+---
+layout: container
+---
+
+<div id="columns" class="container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb clearfix">
+          <a class="home" href="/" title="Return to Home"><i class="icon-home"></i></a>
+          <!-- <span class="navigation-pipe">&gt;</span>
+          <span class="navigation_page">
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+
+              <% for danhmuc in @getCollection("html").findAllLive({danhmuc: true, categoryName: @document.category}).toJSON(): %>
+                      <a itemprop="url" title="<%= danhmuc.title %>" href="<%= danhmuc.url%>">
+                        <%= danhmuc.title %>
+                      </a>
+                <% end %>
+            </span> -->
+            <span class="navigation-pipe">></span><%= @document.title %></span>
+        </div>
+        <!-- /Breadcrumb -->
+
+        <div id="slider_row" class="row">
+          <div id="top_column" class="center_column col-xs-12 col-sm-12"></div>
+        </div>
+        <div class="row">
+          <div id="center_column" class="center_column col-xs-12 col-sm-9">
+            <div class="pos_center_column">
+
+
+              <div itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="url" content="">
+                <div class="pos-product-info">
+                  <div class="primary_block row">
+                    <div class="container">
+                      <div class="top-hr"></div>
+                    </div>
+
+                    <!-- left infos-->
+                    <div class="pb-left-column col-xs-12 col-sm-5 col-md-6">
+
+
+
+                      <!-- product img-->
+                      <div id="image-block" class="clearfix">
+
+                        <span class="new-box">
+                          <span class="new-label">Mới</span>
+                        </span>
+
+                        <span class="sale-box">
+                          <span class="sale-label">-5%</span>
+                        </span>
+
+                        <span class="discount">Reduced price!</span>
+                        <span id="view_full_size">
+
+                          <img id="bigpic" itemprop="image" src="/<%= @document.images[0].thickbox %>" title="<%= @document.title %>" alt="<%= @document.title %>" width="458" height="458" />
+                          <span class="span_link no-print">Xem hình lớn</span>
+                        </span>
+                      </div>
+                      <!-- end image-block -->
+                      <!-- thumbnails -->
+                      <div id="views_block" class="clearfix ">
+                        <span class="view_scroll_spacer">
+                          <a id="view_scroll_left" class="" title="Other views" href="javascript:{}">
+        										Trước
+        									</a>
+                        </span>
+                        <div id="thumbs_list">
+                          <ul id="thumbs_list_frame">
+
+                    <% for imagenumber in [0...@document.images.length]: %>
+                      <% image = @document.images[imagenumber] %>
+                        <li>
+                          <a href="/<%= image.thickbox %>" data-fancybox-group="other-views" class="fancybox <% if imagenumber is 0:%> shown <% end %> " title="<%= @document.title %>">
+                                                          <img class="img-responsive"  src="/<%= image.url %>" alt="<%= @document.title %>" title="<%= @document.title %>" height="80" width="80" itemprop="image" />
+                                                      </a>
+                        </li>
+                      <% end %>
+
+
+
+
+
+
+                          </ul>
+                        </div>
+                        <!-- end thumbs_list -->
+                        <a id="view_scroll_right" title="Other views" href="javascript:{}">
+									Next
+								</a>
+                      </div>
+                      <!-- end views-block -->
+                      <!-- end thumbnails -->
+                    </div>
+                    <!-- end pb-left-column -->
+                    <!-- end left infos-->
+                    <!-- center infos -->
+                    <div class="pb-center-column col-xs-12 col-sm-7 col-md-6">
+                      <h1 itemprop="name">
+                        <%= @document.title %>
+                      </h1>
+                      <!--     <p id="product_reference">
+                                                <label>Reference: </label>
+                                                <span class="editable">fefefe</span>
+                                            </p>-->
+                      <p id="product_condition">
+                        <% if @document.status != "" : %>
+                          <label>Tình trạng: </label>
+                          <link itemprop="itemCondition" href="http://schema.org/NewCondition" />
+                          <span class="editable">
+                            <%= @document.status %>
+                          </span>
+                          <% end %>
+                      </p>
+
+                      <div class="content_prices clearfix">
+                        <!-- prices -->
+
+
+                        <% for allPrice in @document.sizes: %>
+                          <div class="<%= allPrice.id %> every-price" style="display: none">
+                            <p class="our_price_display" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                              <link itemprop="availability" href="http://schema.org/InStock" />
+                              <span id="our_price_display" class="price" itemprop="price" content="">
+                                <%= allPrice.price %>
+                              </span> VNĐ
+                              <meta itemprop="priceCurrency" content="VND" />
+                            </p>
+
+                            <% if allPrice.old_price > allPrice.price: %>
+                              <p id="reduction_percent">
+                                <span id="reduction_percent_display"><%= ((allPrice.price * 100) // allPrice.old_price) - 100 %>%</span>
+                              </p>
+                              <p id="reduction_amount" style="display:none">
+                                <span id="reduction_amount_display"></span>
+                              </p>
+                              <p id="old_price">
+                                <span id="old_price_display">
+                                  <span class="price">
+                                    <%= allPrice.old_price %>
+                                  </span> VND</span>
+                              </p>
+                              <% end %>
+
+                          </div>
+                          <% end %>
+
+                        <!-- end prices -->
+
+
+
+                        <div class="clear"></div>
+                      </div>
+
+                      <p class="align_justify"><%= @document.sDescription %></p>
+
+                      <!-- end content_prices -->
+                      <div id="short_description_block">
+                         <!--<div id="short_description_content" class="rte align_justify" itemprop="description">
+                          <p>Thiết kế đơn giản dễ dàng sử dụng</p>
+                        </div>
+
+                        <p class="buttons_bottom_block">
+                          <a href="javascript:{}" class="button">
+										Xem chi tiết
+									</a>
+                        </p>
+                        <!---->
+                      </div>
+                      <!-- end short_description_block -->
+                      <div class="box-cart-bottom" style="">
+
+                        <!-- quantity wanted -->
+                        <p id="quantity_wanted_p">
+                          <label for="quantity_wanted">Số lượng</label>
+                          <a href="#" data-field-qty="qty" class="btn btn-default button-minus product_quantity_down">
+                            <span><i class="icon-minus"></i></span>
+                          </a>
+                          <input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="1" />
+
+                          <a href="#" data-field-qty="qty" class="btn btn-default button-plus product_quantity_up">
+                            <span><i class="icon-plus"></i></span>
+                          </a>
+                          <span class="clearfix"></span>
+                        </p>
+                        <!-- minimal quantity wanted -->
+                        <div class="cart-product">
+                          <p id="add_to_cart" class="buttons_bottom_block no-print">
+                            <a class=" fancybox-fast-view" href="#popup-muahang" rel="nofollow" title="Add to cart">
+  														<span> Mua hàng</span>
+  													</a>
+                          </p>
+
+
+                        </div>
+
+                      </div>
+                      <!-- end box-cart-bottom -->
+                      <!-- + Giỏ hàng form-->
+                      <form id="buy_block" action="" method="post">
+
+                        <div class="box-info-product">
+
+                          <div class="product_attributes clearfix">
+
+                            <!-- attributes -->
+                            <div id="attributes">
+                              <div class="clearfix"></div>
+                              <fieldset class="attribute_fieldset">
+                                <label class="attribute_label" for="group_1">Kích cỡ&nbsp;</label>
+                                <div class="attribute_list">
+                                  <select name="group_1" id="changeSize" class="form-control attribute_select no-print">
+                                    <% for size in @document.sizes: %>
+                                      <option value="<%= size.id %>" title="<%= size.name %>">
+                                        <%= size.name %>
+                                      </option>
+                                      <% end %>
+
+                                  </select>
+                                </div>
+                                <!-- end attribute_list -->
+                              </fieldset>
+                              <fieldset class="attribute_fieldset">
+                                <label class="attribute_label">Màu sắc&nbsp;</label>
+                                <div class="attribute_list">
+                                  <ul id="color_to_pick_list" class="clearfix">
+
+                                    <% for color in @document.colors: %>
+
+                                    <li>
+                                      <a href="" name="<%= color.name %>" class="color_pick" id=""  style="background:<%= color.code %>;" title="<%= color.name %>">
+                                      </a>
+                                    </li>
+
+                                    <% end %>
+
+                                  </ul>
+                                  <input type="hidden" class="color_pick_hidden" name="group_3" value="16" />
+                                </div>
+                                <!-- end attribute_list -->
+                              </fieldset>
+                            </div>
+                            <!-- end attributes -->
+                          </div>
+                          <!-- end product_attributes -->
+
+                        </div>
+                        <!-- end box-info-product -->
+                      </form>
+                      <!-- number of item in stock -->
+                      <!-- <p id="pQuantityAvailable">
+                        <span id="quantityAvailable">
+                          <%= @document.stock_number %>
+                        </span>
+                        <span id="quantityAvailableTxtMultiple">Sản phẩm</span>
+                      </p> -->
+                      <!-- availability or doesntExist -->
+                      <!-- <p id="availability_statut">
+
+                        <span id="availability_value" class="label label-success">Còn trong kho</span>
+                      </p> -->
+                      <p class="warning_inline" id="last_quantities" style="display: none">Warning: Last items in stock!</p>
+                      <p id="availability_date" style="display: none;">
+                        <span id="availability_date_label">Availability date:</span>
+                        <span id="availability_date_value"></span>
+                      </p>
+                      <!-- Out of stock hook -->
+                      <div id="oosHook" style="display: none;">
+
+                      </div>
+                      <p class="socialsharing_product list-inline no-print">
+                        <!--
+                      -->
+
+                      <div id="fb-root"></div>
+                      <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }(document, 'script', 'facebook-jssdk'));</script>
+
+
+                      <div class="fb-share-button" data-href="<%- @site.url %><%- @document.url %>" data-layout="button"></div>
+
+                      </p>
+
+                      <!--  /Module ProductComments -->
+                    </div>
+                    <!-- end center infos-->
+
+
+                  </div>
+                  <!-- end primary_block -->
+                </div>
+                <div class="more-info">
+                  <ul id="more_info_tabs" class="idTabs idTabsShort clearfix">
+                    <li class="first">
+                      <a id="more_info_tab_more_info" href="#idTab1">
+                        <span>Thông số</a>
+                      </span>
+                    </li>
+                    <li><a id="more_info_tab_data_sheet" href="#idTab2">Thông tin sản phẩm</a></li>
+                    <li><a href="#idTab5">Bình luận</a></li>
+                  </ul>
+                  <!-- Data sheet -->
+                  <section id="idTab2" class="page-product-box">
+
+                    <!-- full description -->
+                    <div class="rte">
+
+                      <div class="product-disc space-bottom-35">
+
+                        <%- @content %>
+
+                      </div>
+                    </div>
+                  </section>
+                  <!--end Data sheet -->
+                  <!-- More info -->
+                  <section id="idTab1" class="page-product-box">
+                    <table class="table-data-sheet">
+                      <% for item in @document.specs: %>
+                        <tr class="odd">
+                          <td>
+                            <%= item.name %>
+                          </td>
+                          <td>
+                            <%= item.giatri %>
+                          </td>
+                        </tr>
+                        <% end %>
+                    </table>
+                  </section>
+                  <!--end  More info -->
+                  <!--HOOK_PRODUCT_TAB -->
+                  <div id="idTab5" class="page-product-box">
+                    <div id="product_comments_block_tab">
+
+                      <div id="fb-root"></div>
+                      <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }(document, 'script', 'facebook-jssdk'));</script>
+
+                      <div class="fb-comments" data-href="<%- @site.url %><%- @document.url %>" data-width="100%" data-numposts="5"></div>
+
+                    </div>
+                    <!-- #product_comments_block_tab -->
+
+                  </div>
+                  <!--end HOOK_PRODUCT_TAB -->
+
+
+                  <!-- description & features -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- #center_column -->
+          <div id="right_column" class="col-xs-12 col-sm-3 column">
+            <!-- Block CMS module -->
+            <!-- /Block CMS module -->
+            <!-- MODULE Block best sellers -->
+            <div id="best-sellers_block_right" class="products_block">
+              <h4 class="title_best-sellers">
+                <a href="" title="View a top sellers products">Bán chạy</a>
+              </h4>
+              <div class="block_content">
+                <div class=" Topsellers block_content products-block">
+                  <div class="clearfix bestsellerproductslider">
+                    <% for bestseller in @getCollection("html").findAllLive({bestseller:true}).toJSON()[0...3]: %>
+                        <div class="item-sellers">
+                          <div class="sellers-img">
+                            <a href="<%= bestseller.url%>" title="" class="products-block-image content_img clearfix">
+                              <img class="replace-2x img-responsive" src="../<%= bestseller.images[0].thickbox %>" alt="" />
+                            </a>
+                          </div>
+                          <div class="sellers-content">
+                            <h5>
+                              <a class="product-name" href="<%= bestseller.url%>" title=""> <%= bestseller.title %> </a>
+                            </h5>
+                            <p class="product-description"></p>
+                            <div class="price-box">
+                              <span class="price"><%= bestseller.sizes[0].price %></span>
+                            </div>
+                          </div>
+                        </div>
+                    <% end %>
+
+                  </div>
+                </div>
+                <!-- <div class="lnk">
+        	<a href="http://demo.posthemes.com/pos_beestore/layout2/en/best-sales" title="All best sellers"  class="btn btn-default button button-small"><span>All best sellers<i class="icon-chevron-right right"></i></span></a>
+        </div> -->
+              </div>
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function() {
+                var owl = $(".Topsellers");
+                owl.owlCarousel({
+                  items: 1,
+                  slideSpeed: 1000,
+                  pagination: false,
+                  itemsDesktop: [1200, 1],
+                  itemsDesktopSmall: [1024, 1],
+                  itemsTablet: [768, 1],
+                  itemsMobile: [480, 1]
+                });
+                $(".nextsellers").click(function() {
+                  owl.trigger('owl.next');
+                })
+                $(".prevsellers").click(function() {
+                  owl.trigger('owl.prev');
+                })
+              });
+            </script>
+            <!-- /MODULE Block best sellers -->
+
+            <div class="banner-box ">
+              <a href="#">
+                <img src="/img/banner1.jpg" class="img-responsive" alt="" />
+              </a>
+            </div>
+
+
+            <div class="banner-box ">
+              <a href="#">
+                <img src="/img/banner2.jpg" class="img-responsive" alt="" />
+              </a>
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- #columns -->
+
+      <div id="popup-muahang" style="display: none;">
+        <div class="clearfix" style="width: 100%">
+          <div class="layer_cart_product col-xs-12 col-md-6">
+            <h2>
+              <i class="icon-check"></i>Xác nhận đơn hàng
+            </h2>
+            <div class="product-image-container layer_cart_img">
+              <img class="layer_cart_img img-responsive" src="/<%= @document.images[0].thickbox %>" alt=" <%= @document.title %>" title="<%= @document.title %>">
+            </div>
+            <div class="layer_cart_product_info">
+              <span id="layer_cart_product_title" class="product-name">Khỉ Con Xanh</span>
+              <span id="layer_cart_product_attributes"></span>
+
+              <div>
+                <strong class="dark">Kích cỡ: </strong>
+                <span id="layer_cart_product_quantity">Size M ban đêm
+
+              </span>
+              </div>
+
+              <div>
+                <strong class="dark">Số lượng: </strong>
+                <span id="layer_cart_product_quantity">1
+
+              </span>
+              </div>
+              <div>
+                <strong class="dark">Đơn giá: </strong>
+                <span id="layer_cart_product_price">49.000</span>
+              </div>
+              <div>
+                <strong class="dark">Tổng cộng: </strong>
+                <span id="layer_cart_product_price">49.000</span>
+              </div>
+            </div>
+          </div>
+          <div class="layer_cart_cart col-xs-12 col-md-6">
+            <h2>
+              <span class="ajax_cart_product_txt ">
+                Thông tin liên hệ
+              </span>
+            </h2>
+
+            <div class="form_content clearfix">
+
+              <div class="form-group">
+    						<label for="email">Họ tên: </label>
+    						<input class="is_required validate account_input form-control" data-validate="" type="text" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-position: 98% 50%; background-repeat: no-repeat;">
+    					</div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+        						<label for="email">Email: </label>
+        						<input class="is_required validate account_input form-control" data-validate="" type="email" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-position: 98% 50%; background-repeat: no-repeat;">
+        					</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+        						<label for="email">Số điện thoại: </label>
+        						<input class="is_required validate account_input form-control" data-validate="" type="text" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-position: 98% 50%; background-repeat: no-repeat;">
+        					</div>
+                </div>
+              </div>
+              <div class="form-group">
+    						<label for="email">Địa chỉ: </label>
+    						<input class="is_required validate account_input form-control" data-validate="" type="text" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAALZJREFUOBFjYKAANDQ0rGWiQD9IqzgL0BQ3IKMXiB8AcSKQ/waIrYDsKUD8Fir2pKmpSf/fv3+zgPxfzMzMSbW1tbeBbAaQC+b+//9fB4h9gOwikCAQTAPyDYHYBciuBQkANfcB+WZAbPP37992kBgIUOoFBiZGRsYkIL4ExJvZ2NhAXmFgYmLKBPLPAfFuFhaWJpAYEBQC+SeA+BDQC5UQIQpJYFgdodQLLyh0w6j20RCgUggAAEREPpKMfaEsAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-position: 98% 50%; background-repeat: no-repeat;">
+    					</div>
+
+              <!-- <div class="form-group">
+    						<label for="email">Thông tin thêm về đơn hàng (nếu có): </label>
+
+                <textarea name="name" rows="3" cols="40" class="is_required validate account_input form-control"></textarea>
+    					</div> -->
+
+  					<p class="submit">
+  						<input type="hidden" class="hidden" name="back" value="">
+              	<button type="submit" id="" name="" class="button btn btn-default button-medium">
+  							<span>
+  								<i class="fa fa-shopping-cart"></i>
+  								Đặt mua
+  							</span>
+  						</button>
+  					</p>
+  				</div>
+
+
+
+          </div>
+        </div>
+        <div class="crossseling"></div>
+      </div> <!-- #layer_cart -->

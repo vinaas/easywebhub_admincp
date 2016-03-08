@@ -1,0 +1,156 @@
+<!-- Block categories module -->
+<div class="ma-nav-mobile-container  visible-xs visible-sm ">
+  <div class="navbar">
+    <div id="navbar-inner" class="navbar-inner navbar-inactive">
+      <a class="btn btn-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <span class="brand">Danh mục</span>
+      <ul id="ma-mobilemenu" class="tree dhtml  mobilemenu nav-collapse collapse">
+        <li>
+          <a href="/" title="Trang chủ">
+                                             Trang chủ
+                                         </a>
+        </li>
+        <li>
+          <a href="http://anvibaby.com/baiviet/gioi-thieu-ta-vai-anvibaby.html" title="Giới thiệu">
+                                             Giới thiệu
+                                         </a>
+        </li>
+        <li>
+          <a href="http://anvibaby.com/ta-ban-ngay-size-L.html" title="Sản phẩm">
+                                          Sản phẩm
+                                         </a>
+
+
+        </li>
+
+        <li>
+          <a href="http://anvibaby.com/huong-dan-su-dung-ta.html" title="Kiến thức tã vải">
+                                              Kiến thức tã vải
+                                           </a>
+
+        </li>
+        <li>
+          <a href="http://anvibaby.com/cam-nang-me-va-be.html" title="Nuôi con">
+                                              Nuôi con
+                                           </a>
+        </li>
+
+        <li>
+          <a href="http://anvibaby.com/baiviet/cach-thuc-mua-hang.html" title="Đại lý">
+                                           Đại lý
+                                         </a>
+
+          <ul>
+            <li>
+              <a href="http://anvibaby.com/baiviet/cach-thuc-mua-hang.html" title=" Cách thức mua hàng">
+                                                             Cách thức mua hàng
+                                                            </a>
+            </li>
+            <li>
+              <a href="" title="">
+                                                              Đăng ký làm đại lý
+                                                            </a>
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li>
+          <a href="" title="">
+                                          Liên hệ
+                                       </a>
+        </li>
+
+
+      </ul>
+      <script type="text/javascript">
+        $('div#categories_block_left ul.dhtml').hide();
+      </script>
+    </div>
+  </div>
+</div>
+<!-- /Block categories module -->
+<div class="nav-container visible-lg visible-md ">
+  <div id="pt_custommenu" class="pt_custommenu">
+    <div id="pt_menu_home" class="pt_menu <%= if @document.activeName is 'trangchu' : %> act <% end %>">
+      <div class="parentMenu">
+        <a href="/">
+          <span>Trang chủ</span>
+        </a>
+      </div>
+    </div>
+    <div class="pt_menu_cms pt_menu <%= if @document.activeName is 'gioithieu' : %> act <% end %> ">
+      <div class="parentMenu">
+        <a href="<%= @site.url %>/baiviet/gioi-thieu-ta-vai-anvibaby.html" title="Giới thiệu">
+          <span>Giới thiệu</span>
+        </a>
+      </div>
+    </div>
+    <div class="pt_menu_cms pt_menu <%= if @document.activeName is 'sanpham' : %> act <% end %>">
+      <div class="parentMenu">
+        <a href="<%= @site.url %>/ta-ban-ngay-size-L.html" title="Sản phẩm">
+          <span>Sản phẩm</span>
+        </a>
+      </div>
+
+
+    </div>
+    <div class="pt_menu nav-1 <%= if @document.activeName is 'kienthuc' : %> act <% end %>">
+      <div class="parentMenu">
+        <a href="<%= @site.url %>/huong-dan-su-dung-ta.html" title="Kiến thức tã vải">
+          <span> Kiến thức tã vải </span>
+        </a>
+      </div>
+
+    </div>
+    <div class="pt_menu_cms pt_menu <%= if @document.activeName is 'nuoicon' : %> act <% end %>">
+      <div class="parentMenu">
+        <a href="<%= @site.url %>/cam-nang-me-va-be.html" title="Nuôi con">
+          <span>Nuôi Con</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="pt_menu_cms pt_menu <%= if @document.activeName is 'daily' : %> act <% end %>">
+      <div class="parentMenu">
+        <a href="<%= @site.url %>/baiviet/cach-thuc-mua-hang.html" title="Đại lý">
+          <span>Đại Lý</span>
+        </a>
+      </div>
+
+      <div class="popup" style="display: none; width: 300px;">
+        <div class="block1" style="width: 300px;">
+          <div class="column first col1">
+            <div class="itemSubMenu level3">
+              <div class="itemMenu level4">
+                <a class="itemMenuName level4" href="<%= @site.url %>/baiviet/cach-thuc-mua-hang.html" title=" Cách thức mua hàng">
+                  <span class="text-nowrap">Cách thức mua hàng</span>
+                </a>
+                <a class="itemMenuName level4" href="">
+                  <span class="text-nowrap">Đăng ký làm đại lý</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="clearBoth"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pt_menu_cms pt_menu <%= if @document.activeName is 'lienhe' : %> act <% end %>">
+      <div class="parentMenu">
+        <a href="<%= @site.url %>/baiviet/lienhe.html">
+          <span>Liên Hệ</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var CUSTOMMENU_POPUP_EFFECT = 0;
+  var CUSTOMMENU_POPUP_TOP_OFFSET = 60;
+</script>

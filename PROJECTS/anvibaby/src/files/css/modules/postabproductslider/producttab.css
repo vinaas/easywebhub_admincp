@@ -1,0 +1,44 @@
+.product-tabs-container-slider { 'Roboto Slab', cursive
+	display:inline-block;
+	width:100%;
+	background:#fff;
+	padding:30px;
+	border-radius:20px;
+	margin-bottom: 30px;
+}
+	ul.tabs {
+		display:inline-block;
+		position:relative;
+		margin: 0 0 30px 0;
+		padding: 0;
+	}
+	ul.tabs:before {
+		background: url(../../../img/icon_bee.png) no-repeat;
+		height: 60px;
+		content: "";
+		display: block;
+		position: absolute;
+		top: -40px;
+		right: -240px;
+		width: 303px;
+	}
+	ul.tabs li {
+		float: left;
+		font-family: 'Roboto Slab', cursive;;
+		font-size:16px;
+		color:#fff;
+		font-weight:400;
+		text-transform:capitalize;
+		line-height:40px;
+        
+		padding:0 25px;
+		border-radius:15px;
+		background:#0a97d4;
+		margin-right:10px;
+		cursor:pointer;
+	}
+
+	ul.tabs li.active,	ul.tabs li:hover{
+		background: #f95c95;
+	}
+	
