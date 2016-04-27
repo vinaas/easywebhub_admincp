@@ -1,0 +1,92 @@
+[
+    {
+     "id" : "easywebhub.com",
+     "name" : "CT AdminCP quản lý thư mục của website easywebhub",
+     "rootpath" : "/easywebhub",
+
+     "roles" : [
+         {
+         "name" : "Admin",
+         "display" : "Quản trị viên",
+         "access" : ["*.md", "*.html", "*.config"]
+         },
+         {
+         "name" : "Developer",
+         "display" : "Lập trình giao diện",
+         "access" : ["/content/*.md", "/layouts/*.html", "/source/*.css", "/source/*.js"]
+         },
+         {
+         "name" : "Contenter",
+         "display" : "Nhân viên post bài",
+         "access" : ["/content/*.md"]
+         }
+      ],
+
+     "accounts" : [
+       {
+         "username" : "administrator",
+         "roles" : ["Admin", "Contenter", "Developer"]
+       },
+       {
+         "username" : "quocbao.tn",
+         "roles" : ["Contenter", "Developer"]
+       },
+     ],
+
+     "files" : [
+       {
+         "path" :  "/content/index.md",
+         "name" : "Trang chủ",
+         "type" : "md"
+       },
+       {
+         "path" :  "/layouts/index.html",
+         "name" : "Layouts của",
+         "type" : "layout"
+       },
+     ]
+  },
+
+  {
+     "id" : "anvibaby.com",
+     "name" : "CT AdminCP quản lý thư mục của website anvibaby",
+     "rootpath" : "/anvibaby",
+
+     "roles" : [
+         {
+         "name" : "Developer",
+         "display" : "Lập trình giao diện",
+         "access" : ["/content/*.md", "/layouts/*.html", "/source/*.css", "/source/*.js"]
+         },
+         {
+         "name" : "Contenter",
+         "display" : "Nhân viên post bài",
+         "access" : ["/content/*.md"]
+         }
+      ],
+
+     "accounts" : [
+       {
+         "username" : "administrator",
+         "roles" : ["Contenter", "Developer"]
+       },
+       {
+         "username" : "anvibaby_dev",
+         "roles" : ["Contenter", "Developer"]
+       },
+     ],
+
+     "files" : [
+       {
+         "path" :  "/content/index.md",
+         "name" : "Trang chủ",
+         "type" : "md"
+       },
+       {
+         "path" :  "/layouts/index.html",
+         "name" : "Layouts của",
+         "type" : "layout"
+       },
+     ]
+  }
+  ]
