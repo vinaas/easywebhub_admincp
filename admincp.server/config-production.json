@@ -7,6 +7,12 @@
     },
     "database": {
     },
+    "sessionManager": {
+        "secret"    : "day la bi mat, chac eo ai biet dau",
+        "expiresIn" : "7d",
+        "algorithm ": "HS256",
+        "header"    : "SessionId"
+    },
     "log"     : {
         "level"          : "info",
         "dir"            : "log",
