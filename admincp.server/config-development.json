@@ -1,0 +1,23 @@
+{
+    "app"           : {
+        "name"  : "admincp-server",
+        "host"  : "127.0.0.1",
+        "port"  : 8883,
+        "webDir": "web"
+    },
+    "database"      : {
+    },
+    "sessionManager": {
+        "secret"    : "day la bi mat, chac eo ai biet dau",
+        "expiresIn" : "7d",
+        "algorithm ": "HS256",
+        "header"    : "SessionId"
+    },
+    "log"           : {
+        "level"          : "debug",
+        "dir"            : "log",
+        "period"         : "1d",
+        "count"          : 7,
+        "ringBufferLimit": 50
+    }
+}

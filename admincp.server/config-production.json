@@ -1,0 +1,17 @@
+{
+    "app"     : {
+        "name"  : "admincp-server",
+        "host"  : "0.0.0.0",
+        "port"  : 8883,
+        "webDir": "web"
+    },
+    "database": {
+    },
+    "log"     : {
+        "level"          : "info",
+        "dir"            : "log",
+        "period"         : "1d",
+        "count"          : 7,
+        "ringBufferLimit": 50
+    }
+}

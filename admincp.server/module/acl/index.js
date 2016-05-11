@@ -1,105 +1,90 @@
 'use strict';
 
-const UUID = require('node-uuid');
-const Cookie = require('cookie');
+const restify = require('restify');
+const shiroTrie = require('shiro-trie');
+const EventEmitter = require('events');
+const _ = require('lodash');
 
-const MemoryStore = require(__dirname + '/memory-store.js');
-const RedisStore = require(__dirname + '/redis-store.js');
+// const RoleModel = require(__dirname + '/role-model.js');
 
-/**
- * @return {string}
- */
-function CreateSessionId() {
-    let buffer = new Buffer(16);
-    UUID.v4(null, buffer, 0);
-    return buffer.toString('hex');
-}
-
-class SessionMiddleware {
-    /*
-     * @param {Object} opts an options object
-     * header httpHeader or cookie header
-     * maxAge session TTL in seconds
-     * {Object} memory options for memory store
-     * {Object} redis options for redis store
-     * */
-    constructor(opts) {
-        this.config = {};
-        this.config.header = opts.header || 'SessionId';
-
-        this.logger = opts.logger || console;
-
-        if (opts.maxAge !== undefined)
-            this.config.maxAge = opts.maxAge * 1000;
-        else
-            this.config.maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days
-        if (!opts.memory && !opts.redis) {
-            throw new Error('session module need config option "memory" or "redis"');
-        }
-
-        if (opts.memory)
-            this.store = new MemoryStore(opts.memory);
-
-        if (opts.redis) {
-            this.store = new RedisStore(opts.redis);
-            // TODO optimize add a lru memory cache store
-        }
+class Acl extends EventEmitter {
+    constructor() {
+        super();
+        // this.loadRole();
+        // this.on('AclChanged', function () {
+        //     this.loadRole();
+        // });
+        this.ForbiddenError = new restify.ForbiddenError();
     }
 
-    createSession(data) {
-        let me = this;
-        let session = {};
-        session.data = data || {};
-        session.manager = this;
-        session.id = CreateSessionId();
-        session.save = function () {
-            me.store.set(session.id, session.data, me.config.maxAge);
-        };
+    loadRole() {
+        return RoleModel.query()
+            .then(entries => {
+                let tmpRoleMap = {};
 
-        session.destroy = function () {
-            me.store.del(session.id);
-        };
-        return session;
+                // group role
+                entries.forEach(entry => {
+                    let role;
+                    if (tmpRoleMap.hasOwnProperty[entry.role])
+                        role = tmpRoleMap[entry.role];
+                    else
+                        role = shiroTrie.new();
+                    role.add(entry.permission);
+
+                });
+
+                this.roleMap = tmpRoleMap;
+            });
     }
 
     middleware() {
         const me = this;
         return function (req, res, next) {
-            // tim session id trong http header
-            let sid = req.headers[me.config.header];
-            if (sid === undefined) {
-                // thu tim session id trong cookie
-                let cookieHeader = req.headers.cookie;
-                if (cookieHeader) {
-                    req.cookies = Cookie.parse(cookieHeader);
-                    sid = req.cookies[me.config.header];
-                }
+            if (req.session == null)
+                return next(me.ForbiddenError);
+
+            var routePath = req.url;
+            // remove prefix /
+            if (routePath.substr(0, 1) == '/')
+                routePath = routePath.substr(1);
+            // remove suffix /
+            if (routePath.substr(-1) == '/')
+                routePath = routePath.substr(0, routePath.length - 1);
+
+            // uncomment to protect only guard path
+            //if(routePath.startsWith(me.opts['guardPath']) == false) {
+            //    return next();
+            //}
+
+            routePath = routePath.replace(/\//g, ':');
+            if (routePath == '') routePath = 'index.html';
+
+            let permissionPath = `${req.method.toLowerCase()}:${routePath}`;
+            //console.log('routePath', routePath, permissionPath);
+            let roleName;
+            // check if is guest
+            if (req.state.guest) {
+                roleName = 'guest';
+            } else {
+                // forbidden if req has no role
+                if (!('state' in req) || !('user' in req.state) || !('role' in req.state.user))
+                    return next(me.ForbiddenError);
+                roleName = req.state.user.role;
             }
 
-            // neu co sid thi load session data, set cho req
-            if (!sid)
-                return next();
+            let aclRole = me.roleMap[roleName];
+            // forbidden if role not exists
+            if (aclRole == undefined)
+                return next(me.ForbiddenError);
 
-            me.store.get(sid).then(data => {
-                req.session = me.createSession(data);
-            next();
-        }).catch(err => {
-                next(err);
-        });
+            //console.log(JSON.stringify(aclRole.data, null, 4));
+            // check role permission
+            if (aclRole.check(permissionPath) == false)
+                return next(me.ForbiddenError);
+
+            return next();
         }
-    }
-
-    has(id) {
-        return this.store.has(id);
-    }
-
-    get(id) {
-        return this.store.get(id);
-    }
-
-    reset() {
-        return this.store.reset();
     }
 }
 
-module.exports = SessionMiddleware;
+module.exports = Acl;
