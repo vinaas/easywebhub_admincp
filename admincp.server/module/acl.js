@@ -7,6 +7,8 @@ const _ = require('lodash');
 
 // const RoleModel = require(__dirname + '/role-model.js');
 
+
+
 class Acl extends EventEmitter {
     constructor() {
         super();
@@ -40,7 +42,7 @@ class Acl extends EventEmitter {
     middleware() {
         const me = this;
         return function (req, res, next) {
-            if (req.session == null)
+            if (req.session === undefined || req.session.role === undefined)
                 return next(me.ForbiddenError);
 
             var routePath = req.url;
@@ -51,30 +53,14 @@ class Acl extends EventEmitter {
             if (routePath.substr(-1) == '/')
                 routePath = routePath.substr(0, routePath.length - 1);
 
-            // uncomment to protect only guard path
-            //if(routePath.startsWith(me.opts['guardPath']) == false) {
-            //    return next();
-            //}
-
             routePath = routePath.replace(/\//g, ':');
             if (routePath == '') routePath = 'index.html';
 
             let permissionPath = `${req.method.toLowerCase()}:${routePath}`;
             //console.log('routePath', routePath, permissionPath);
-            let roleName;
-            // check if is guest
-            if (req.state.guest) {
-                roleName = 'guest';
-            } else {
-                // forbidden if req has no role
-                if (!('state' in req) || !('user' in req.state) || !('role' in req.state.user))
-                    return next(me.ForbiddenError);
-                roleName = req.state.user.role;
-            }
-
-            let aclRole = me.roleMap[roleName];
+            let aclRole = me.roleMap[req.session.role];
             // forbidden if role not exists
-            if (aclRole == undefined)
+            if (aclRole === undefined)
                 return next(me.ForbiddenError);
 
             //console.log(JSON.stringify(aclRole.data, null, 4));

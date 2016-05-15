@@ -1,11 +1,15 @@
 {
-    "app"     : {
-        "name"  : "admincp-server",
-        "host"  : "0.0.0.0",
-        "port"  : 8883,
-        "webDir": "web"
+    "app"           : {
+        "name"        : "admincp-server",
+        "host"        : "0.0.0.0",
+        "port"        : 8883,
+        "restPathName": "api",
+        "webDir"      : "web",
+        "dataDir"     : "data"
     },
-    "database": {
+    "database"      : {
+        "connectionString": "couchbase://127.0.0.1",
+        "bucket"          : "admincp"
     },
     "sessionManager": {
         "secret"    : "day la bi mat, chac eo ai biet dau",
@@ -13,7 +17,7 @@
         "algorithm ": "HS256",
         "header"    : "SessionId"
     },
-    "log"     : {
+    "log"           : {
         "level"          : "info",
         "dir"            : "log",
         "period"         : "1d",
