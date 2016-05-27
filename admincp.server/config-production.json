@@ -1,15 +1,29 @@
 {
     "app"           : {
-        "name"        : "admincp-server",
-        "host"        : "0.0.0.0",
-        "port"        : 8883,
-        "restPathName": "api",
-        "webDir"      : "web",
-        "dataDir"     : "data"
+        "name"       : "admincp-server",
+        "host"       : "127.0.0.1",
+        "port"       : 8883,
+        "servicePath": "api",
+        "webPath"    : "web",
+        "dataPath"   : "data",
+        "cors"       : {
+            "origins"    : [
+                "*"
+            ],
+            "credentials": false
+        }
     },
-    "database"      : {
-        "connectionString": "couchbase://127.0.0.1",
-        "bucket"          : "admincp"
+    "mailer"          : {
+        "type"     : "sparkpost",
+        "sparkpost": {
+            "apiKey": "be0005c08af2169ff35da6e9602f243f9d18f96a"
+        }
+    },
+    "couchbase"     : {
+        "server"     : "127.0.0.1:8091",
+        "userBucket" : "admincp",
+        "orderBucket": "admincp",
+        "password"   : ""
     },
     "sessionManager": {
         "secret"    : "day la bi mat, chac eo ai biet dau",
@@ -18,7 +32,7 @@
         "header"    : "SessionId"
     },
     "log"           : {
-        "level"          : "info",
+        "level"          : "debug",
         "dir"            : "log",
         "period"         : "1d",
         "count"          : 7,

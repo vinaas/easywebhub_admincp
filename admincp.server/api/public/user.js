@@ -1,13 +1,13 @@
 'use strict';
 
-let app = require('app');
+module.exports = app => {
+    return {
+        "get/": (req, res, next) => {
 
-module.exports = {
-    "get/": (req, res, next) => {
+        },
 
-    },
+        "post/": (req, res, next) => {
 
-    "post/": (req, res, next) => {
-
+        }
     }
 };

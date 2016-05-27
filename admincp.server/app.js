@@ -16,6 +16,7 @@ const changeCase = require('change-case');
 
 const JwtSessionManager = require('module/jwt-session-manager');
 const Acl = require('module/acl');
+const Mailer = require('module/mailer');
 
 // LOAD CONFIG FILE
 conf.file({
@@ -65,13 +66,44 @@ server.server.setTimeout(15000);
 
 // add middleware vo server
 server.use(require('module/secure-header')());
+
+// COR
+let corOptions = conf.get('app.cor');
+if (corOptions)
+    server.use(restify.CORS(corOptions));
+
 server.use(restify.queryParser());
 server.use(restify.gzipResponse());
 server.use(restify.bodyParser({
-    maxBodySize: 8192,
+    maxBodySize: 65536,
     mapParams:   true,
     mapFiles:    false
 }));
+
+// SESSION MANAGER
+let sessionManager = new JwtSessionManager(conf.get('sessionManager'));
+
+// ACL
+let acl = new Acl();
+
+// MAILER
+let mailerType = conf.get('mailer.type');
+let mailerConf = conf.get(`mailer.${mailerType}`);
+let mailer = new Mailer(mailerType, mailerConf);
+
+// DB
+let cluster = new couchbase.Cluster(conf.get('couchbase.connectionString'));
+let app = {
+    server:         server,
+    acl:            acl,
+    sessionManager: sessionManager,
+    log:            log,
+    conf:           conf,
+    mailer:         mailer,
+    cluster:        cluster,
+    userBucket:     cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('database.password')),
+    orderBucket:    cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('database.password'))
+};
 
 function loadRouteInDir(dir, middlewareArray) {
     middlewareArray = middlewareArray || [];
@@ -80,7 +112,7 @@ function loadRouteInDir(dir, middlewareArray) {
         let routeFilePath = path.join(dir, fileName);
         // loc bo? sub folder
         if (fs.statSync(routeFilePath).isDirectory()) return;
-        let routeModule = require(routeFilePath); // load file nhu 1 module
+        let routeModule = require(routeFilePath)(app); // load file nhu 1 module
         // loop cac service path trong module
         _.forOwn(routeModule, (handler, routePath) => {
             let parts = routePath.split('/');
@@ -89,13 +121,13 @@ function loadRouteInDir(dir, middlewareArray) {
             // add file name
             parts.unshift(changeCase.param(path.basename(fileName, path.extname(fileName))));
             // add service name vo dau` url
-            parts.unshift(conf.get('app.restPathName'));
+            parts.unshift(conf.get('app.servicePath'));
             let url = parts.join('/');
             // tao. rest handler + middleware
             let params = [url];
             params.push.apply(params, middlewareArray);
             params.push(handler);
-            log.info(`register service ${method}:${url}`, params);
+            log.info(`register service ${method}:${url}`);
             // dang ky rest service vo restify
             server[method].apply(server, params);
         });
@@ -103,31 +135,14 @@ function loadRouteInDir(dir, middlewareArray) {
 }
 
 function loadPublicRoute() {
-    let routeDir = path.join(__dirname, conf.get('app.restPathName'), 'public');
+    let routeDir = path.join(__dirname, conf.get('app.servicePath'), 'public');
     return loadRouteInDir(routeDir);
 }
 
 function loadPrivateRoute() {
-    let routeDir = path.join(__dirname, conf.get('app.restPathName'), 'private');
-    return loadRouteInDir(routeDir, [ acl.middleware() ]);
+    let routeDir = path.join(__dirname, conf.get('app.servicePath'), 'private');
+    return loadRouteInDir(routeDir, [acl.middleware()]);
 }
-
-// SESSION MANAGER
-let sessionManager = new JwtSessionManager(conf.get('sessionManager'));
-
-// ACL
-let acl = new Acl();
-
-// DB
-let cluster = new couchbase.Cluster(conf.get('database.connectionString'));
-let app = {
-    server:         server,
-    acl:            acl,
-    sessionManager: sessionManager,
-    log:            log,
-    cluster:        cluster,
-    bucket:         cluster.openBucket(conf.get('database.bucket'))
-};
 
 app.start = function () {
     server.use(sessionManager.middleware());
@@ -135,7 +150,7 @@ app.start = function () {
     loadPrivateRoute();
     // static web
     server.get(/.*/, restify.serveStatic({
-        directory: conf.get('app.webDir'),
+        directory: conf.get('app.webPath'),
         default:   'index.html',
         charSet:   'utf-8'
     }));
@@ -148,7 +163,7 @@ app.start = function () {
         log.info('%s listening at %s', server.name, server.url);
     });
 
-    require('model/account');
+    // require('model/account');
 };
 
 module.exports = app;
