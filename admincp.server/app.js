@@ -87,9 +87,9 @@ let sessionManager = new JwtSessionManager(conf.get('sessionManager'));
 let acl = new Acl();
 
 // MAILER
-let mailerType = conf.get('mailer.type');
-let mailerConf = conf.get(`mailer.${mailerType}`);
-let mailer = new Mailer(mailerType, mailerConf);
+let mailerTransport = conf.get('mail.transport');
+let mailerConf = conf.get(`mail.${mailerTransport}`);
+let mailer = new Mailer(mailerTransport, mailerConf);
 
 // DB
 let cluster = new couchbase.Cluster(conf.get('couchbase.connectionString'));

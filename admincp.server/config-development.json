@@ -13,8 +13,8 @@
             "credentials": false
         }
     },
-    "mailer"          : {
-        "type"     : "sparkpost",
+    "mail"          : {
+        "transport": "sparkpost",
         "sparkpost": {
             "apiKey": "be0005c08af2169ff35da6e9602f243f9d18f96a"
         }
