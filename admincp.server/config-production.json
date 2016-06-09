@@ -20,10 +20,10 @@
         }
     },
     "couchbase"     : {
-        "server"     : "127.0.0.1:8091",
-        "userBucket" : "admincp",
-        "orderBucket": "admincp",
-        "password"   : ""
+        "connectionString": "couchbase://127.0.0.1:8091",
+        "userBucket"      : "admincp",
+        "orderBucket"     : "admincp",
+        "password"        : ""
     },
     "sessionManager": {
         "secret"    : "day la bi mat, chac eo ai biet dau",
