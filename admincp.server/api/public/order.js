@@ -3,16 +3,13 @@
 const _ = require('lodash');
 const uuid = require('node-uuid');
 const orderEmailTemplate = require('email-template/order');
+const orderDetailEmailTemplate = require('email-template/order-detail');
 
 module.exports = app => {
     return {
         'post/': (req, res, next) => {
             if (req.params.customer && req.params.customer.email) {
-                let emailInfo = orderEmailTemplate(req.params.customer.email, {
-                    order: JSON.stringify(req.params.order, null, 4)
-                });
-
-                // TODO find good id for order
+                // luu db
                 let docId = uuid.v4();
                 let data = req.params;
                 data._id = docId;
@@ -22,19 +19,26 @@ module.exports = app => {
                         res.json({code: -1, message: err.message});
                         return next();
                     }
-                });
 
-                // send email
-                app.mailer.send(emailInfo).then(ret => {
-                    res.json({code: 0, message: 'success'});
-                }).catch(err => {
-                    res.json({code: -1, message: err.message});
+                    // send email cho admin
+                    return app.mailer.send(orderDetailEmailTemplate('mytu358@gmail.com', req.params)).then(ret => {
+                        // send email cho khach
+                        return app.mailer.send(orderEmailTemplate(req.params.customer.email)).then(ret => {
+                            res.json({code: 0, message: 'success'});
+                            next();
+                        }).catch(err => {
+                            res.json({code: -1, message: err.message});
+                            next();
+                        });
+                    }).catch(err => {
+                        res.json({code: -1, message: err.message});
+                        next();
+                    });
                 });
             } else {
                 res.json({code: -1, message: 'order don\'t have email field'});
+                return next();
             }
-
-            next();
         }
     };
 };

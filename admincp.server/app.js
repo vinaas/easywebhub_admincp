@@ -68,9 +68,27 @@ server.server.setTimeout(15000);
 server.use(require('module/secure-header')());
 
 // COR
-let corOptions = conf.get('app.cor');
-if (corOptions)
+let corOptions = conf.get('app.cors');
+if (corOptions) {
+    restify.CORS.ALLOW_HEADERS.push("authorization");
+    restify.CORS.ALLOW_HEADERS.push("withcredentials");
+    restify.CORS.ALLOW_HEADERS.push("x-requested-with");
+    restify.CORS.ALLOW_HEADERS.push("x-forwarded-for");
+    restify.CORS.ALLOW_HEADERS.push("x-real-ip");
+    restify.CORS.ALLOW_HEADERS.push("x-customheader");
+    restify.CORS.ALLOW_HEADERS.push("user-agent");
+    restify.CORS.ALLOW_HEADERS.push("keep-alive");
+    restify.CORS.ALLOW_HEADERS.push("host");
+    restify.CORS.ALLOW_HEADERS.push("accept");
+    restify.CORS.ALLOW_HEADERS.push("connection");
+    restify.CORS.ALLOW_HEADERS.push("upgrade");
+    restify.CORS.ALLOW_HEADERS.push("content-type");
+    restify.CORS.ALLOW_HEADERS.push("dnt"); // Do not track
+    restify.CORS.ALLOW_HEADERS.push("if-modified-since");
+    restify.CORS.ALLOW_HEADERS.push("cache-control");
     server.use(restify.CORS(corOptions));
+}
+
 
 server.use(restify.queryParser());
 server.use(restify.gzipResponse());
