@@ -110,18 +110,32 @@ let mailerConf = conf.get(`mail.${mailerTransport}`);
 let mailer = new Mailer(mailerTransport, mailerConf);
 
 // DB
-let cluster = new couchbase.Cluster(conf.get('couchbase.connectionString'));
 let app = {
     server:         server,
     acl:            acl,
     sessionManager: sessionManager,
     log:            log,
     conf:           conf,
-    mailer:         mailer,
-    cluster:        cluster,
-    userBucket:     cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('database.password')),
-    orderBucket:    cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('database.password'))
+    mailer:         mailer
 };
+
+let cluster = new couchbase.Cluster(conf.get('couchbase.connectionString'));
+app.cluster = cluster;
+app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('database.password'));
+app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('database.password'));
+
+function heatbeatAndReconnect() {
+    app.userBucket.get('not-exists', (err, res) => {
+        if (err != 'The key does not exist on the server');
+            app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('database.password'));
+    });
+
+    app.orderBucket.get('not-exists', (err, res) => {
+        if (err != 'The key does not exist on the server');
+            app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('database.password'));
+    });
+}
+setInterval(heatbeatAndReconnect, 3000);
 
 function loadRouteInDir(dir, middlewareArray) {
     middlewareArray = middlewareArray || [];
