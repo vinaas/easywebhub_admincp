@@ -21,7 +21,7 @@ module.exports = app => {
                     }
 
                     // send email cho admin
-                    return app.mailer.send(orderDetailEmailTemplate('mytu358@gmail.com', req.params)).then(ret => {
+                    return app.mailer.send(orderDetailEmailTemplate('mytu358@gmail.com', JSON.stringify(req.params))).then(ret => {
                         // send email cho khach
                         return app.mailer.send(orderEmailTemplate(req.params.customer.email)).then(ret => {
                             res.json({code: 0, message: 'success'});
