@@ -126,15 +126,15 @@ app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('
 app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('couchbase.password'));
 
 function heatbeatAndReconnect() {
-    app.userBucket.get('not-exists', (err, res) => {
-        if (err != 'The key does not exist on the server') {
+    app.userBucket.get('not-exists', (err, res) => {		
+        if (err.message != 'The key does not exist on the server') {
             console.log('reconnect couchbase.userBucket');
             app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('couchbase.password'));
         }
     });
 
     app.orderBucket.get('not-exists', (err, res) => {
-        if (err != 'The key does not exist on the server') {
+        if (err.message != 'The key does not exist on the server') {
             console.log('reconnect couchbase.orderBucket');
             app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('couchbase.password'));
         }
