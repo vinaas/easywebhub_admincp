@@ -23,6 +23,7 @@ conf.file({
     file:             `config-${process.env.NODE_ENV}.json`,
     logicalSeparator: '.'
 });
+console.log('load config file', `config-${process.env.NODE_ENV}.json`);
 
 // LOG
 const logRingBuffer = new bunyan.RingBuffer({
@@ -121,21 +122,21 @@ let app = {
 
 let cluster = new couchbase.Cluster(conf.get('couchbase.connectionString'));
 app.cluster = cluster;
-app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('database.password'));
-app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('database.password'));
+app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('couchbase.password'));
+app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('couchbase.password'));
 
 function heatbeatAndReconnect() {
     app.userBucket.get('not-exists', (err, res) => {
         if (err != 'The key does not exist on the server') {
             console.log('reconnect couchbase.userBucket');
-            app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('database.password'));
+            app.userBucket = cluster.openBucket(conf.get('couchbase.userBucket'), conf.get('couchbase.password'));
         }
     });
 
     app.orderBucket.get('not-exists', (err, res) => {
         if (err != 'The key does not exist on the server') {
             console.log('reconnect couchbase.orderBucket');
-            app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('database.password'));
+            app.orderBucket = cluster.openBucket(conf.get('couchbase.orderBucket'), conf.get('couchbase.password'));
         }
     });
 }
